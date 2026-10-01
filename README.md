@@ -10,3 +10,7 @@ Reader PDFs for the six-book v7 series.
 | Book 1D | [book-1d-v7.pdf](book-1d-v7.pdf) |
 | Book 2 | [book-2-v7.pdf](book-2-v7.pdf) |
 | Book 3 | [book-3-v7.pdf](book-3-v7.pdf) |
+
+## Copyright
+
+All materials in this repository, including the PDFs and this README, are protected by copyright. All rights reserved. No material may be reproduced, distributed, or used without prior written permission, except as permitted by law.

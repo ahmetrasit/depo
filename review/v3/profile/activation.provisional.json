@@ -1,0 +1,34 @@
+{
+  "_note": "Provisional overlay used to exercise the pipeline before the independent review decisions arrive. Superseded by activation.json.",
+  "activate_l1": ["L1-01", "L1-02", "L1-03", "L1-04", "L1-05", "L1-09", "L1-10", "L1-11", "L1-12", "L1-13", "L1-14", "L1-15", "L1-16", "L1-17", "L1-21", "L1-23", "L1-28", "L1-29", "L1-24"],
+  "importance_overrides": {},
+  "parameter_scope_overrides": {},
+  "parameter_additions": {
+    "L2-04.05": [{"name": "hazard_ids", "type": "list", "required_enhanced": true, "scope": "submission", "check": "each must exist in L2-04.03 (hazard_id or hazardous_situation_id)", "check_type": "mechanical"}],
+    "L2-28.03": [{"name": "declaration_id", "type": "id", "required_enhanced": true, "scope": "submission", "check": "must exist in L2-28.01", "check_type": "mechanical"}]
+  },
+  "rules": [
+    {"id": "R-01", "l2": "L2-16.01", "param": "described_build_id", "op": "eq_anchor", "anchor": "A.release_build_id", "severity": "S3", "why": "The SBOM must describe the release build (FDA-CY V.A.4)."},
+    {"id": "R-02", "l2": "L2-23.04", "param": "tester_org_and_independence", "op": "nonempty", "severity": "S2", "why": "FDA-CY V.C asks who tested and how independent."},
+    {"id": "R-03", "l2": "L2-28.01", "param": "fda_recognition_number", "op": "nonempty", "severity": "S2", "why": "FDA-STD IV.A(1): recognition number on the DoC."}
+  ],
+  "recognition_snapshot": [
+    {"standard": "IEC 62304", "pattern": "62304", "edition_pattern": "2006.*(A(MD)?1|2015)|Ed(ition)?\\s*1\\.1", "recognized_edition": "IEC 62304:2006+AMD1:2015 (Ed 1.1)", "recognition_number": "13-79", "required_clauses": ["5.1", "6", "8"]},
+    {"standard": "ISO 14971", "pattern": "14971", "edition_pattern": "2019", "recognized_edition": "ISO 14971:2019", "recognition_number": "5-125"},
+    {"standard": "IEC 62366-1", "pattern": "62366-1", "edition_pattern": "2015.*(A(MD)?1|2020)|Ed(ition)?\\s*1\\.1", "recognized_edition": "IEC 62366-1:2015+AMD1:2020 (Ed 1.1)", "recognition_number": "5-129"},
+    {"standard": "IEC 81001-5-1", "pattern": "81001-5-1", "edition_pattern": "2021", "recognized_edition": "IEC 81001-5-1:2021", "recognition_number": "13-122"},
+    {"standard": "ANSI/UL 2900-1", "pattern": "2900-1(?!-)", "edition_pattern": "2017|First Edition|1st", "recognized_edition": "ANSI/UL 2900-1 First Edition 2017", "recognition_number": "13-96"},
+    {"standard": "UL 2900-2-1", "pattern": "2900-2-1", "edition_pattern": "2017|First Edition|1st", "recognized_edition": "UL 2900-2-1 First Edition 2017", "recognition_number": "13-104"},
+    {"standard": "ANSI/AAMI SW96", "pattern": "SW96", "edition_pattern": "2023", "recognized_edition": "ANSI/AAMI SW96:2023", "recognition_number": "13-131"},
+    {"standard": "AAMI TIR57", "pattern": "TIR57", "edition_pattern": "2016", "recognized_edition": "AAMI TIR57:2016", "recognition_number": "13-83"},
+    {"standard": "AAMI TIR97", "pattern": "TIR97", "edition_pattern": "2019", "recognized_edition": "AAMI TIR97:2019", "recognition_number": "13-112"},
+    {"standard": "AAMI TIR45", "pattern": "TIR45", "edition_pattern": "2023", "recognized_edition": "AAMI TIR45:2023", "recognition_number": "13-143"},
+    {"standard": "IEC 82304-1", "pattern": "82304-1", "edition_pattern": "2016", "recognized_edition": "IEC 82304-1:2016", "recognition_number": "13-97"},
+    {"standard": "ANSI/ISA 62443-4-1", "pattern": "62443-4-1", "edition_pattern": "2018", "recognized_edition": "ANSI/ISA-62443-4-1-2018", "recognition_number": "13-119"},
+    {"standard": "ISO/IEC 29147", "pattern": "29147", "edition_pattern": "2014", "recognized_edition": "ISO/IEC 29147:2014", "recognition_number": "13-77"},
+    {"standard": "ISO/IEC 30111", "pattern": "30111", "edition_pattern": "2013", "recognized_edition": "ISO/IEC 30111:2013", "recognition_number": "13-78"},
+    {"standard": "IEC/TR 80002-1", "pattern": "80002-1", "edition_pattern": "2009", "recognized_edition": "IEC/TR 80002-1:2009", "recognition_number": "13-34"},
+    {"standard": "ISO/TR 24971", "pattern": "24971(?!-)", "not_recognized": true},
+    {"standard": "ISO 13485", "pattern": "13485", "not_recognized": true}
+  ]
+}

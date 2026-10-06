@@ -1,0 +1,826 @@
+{
+ "reviewer": "Fable",
+ "date": "2026-10-01",
+ "basis": "BIN-HIERARCHY.json 0.1.0, CONSISTENCY-CHAINS.md and STANDARDS-REGISTER.md of 2026-10-01; clause text re-extracted from the library PDFs. See REVIEW-FABLE-2026-10-01.md.",
+ "activate_l1": [
+  "L1-00",
+  "L1-01",
+  "L1-03",
+  "L1-04",
+  "L1-05",
+  "L1-09",
+  "L1-10",
+  "L1-11",
+  "L1-12",
+  "L1-13",
+  "L1-14",
+  "L1-15",
+  "L1-16",
+  "L1-17",
+  "L1-21",
+  "L1-23",
+  "L1-26",
+  "L1-28"
+ ],
+ "dormant_l1": [
+  "L1-02",
+  "L1-06",
+  "L1-07",
+  "L1-08",
+  "L1-18",
+  "L1-19",
+  "L1-20",
+  "L1-22",
+  "L1-24",
+  "L1-25",
+  "L1-27",
+  "L1-29",
+  "L1-30"
+ ],
+ "activation_notes": [
+  "L1-13: activate L2-13.01 and L2-13.02 only (plan date for CC-12 n; report date for CC-12 e and g); L2-13.03-13.05 dormant.",
+  "L1-21: activate in collapsed form (see l2_merges) so CC-04 is computable with one L2.",
+  "Anchors whose source bins are dormant must resolve to 'unresolved', not empty: A.supported_platforms (L2-02.03; CC-18 off), A.labeled_version (L2-29.01), A.device_support_end (L2-25.07/L2-24.10; CC-14 off).",
+  "Second wave: L1-27 together with L1-22, L1-24, L1-25 (CC-08 and CC-16 need both sides); then L1-02, 06, 07, 08, 18, 19."
+ ],
+ "importance_overrides": {
+  "L2-02.03": 2,
+  "L2-03.04": 2,
+  "L2-04.07": 2,
+  "L2-05.03": 2,
+  "L2-06.03": 2,
+  "L2-07.01": 2,
+  "L2-08.02": 2,
+  "L2-09.04": 2,
+  "L2-12.06": 2,
+  "L2-14.02": 2,
+  "L2-15.01": 2,
+  "L2-18.01": 2,
+  "L2-19.01": 2,
+  "L2-21.01": 2,
+  "L2-21.02": 2,
+  "L2-21.03": 2,
+  "L2-21.04": 2,
+  "L2-21.07": 2,
+  "L2-21.08": 2,
+  "L2-22.01": 2,
+  "L2-22.02": 2,
+  "L2-22.03": 2,
+  "L2-22.05": 2,
+  "L2-23.01": 2,
+  "L2-24.03": 2,
+  "L2-24.05": 2,
+  "L2-24.09": 2,
+  "L2-24.10": 2,
+  "L2-25.02": 2,
+  "L2-26.02": 2,
+  "L2-27.09": 2,
+  "L2-28.04": 2,
+  "L2-28.05": 2,
+  "L2-29.01": 2,
+  "L2-09.09": 3
+ },
+ "importance_3_list": [
+  "L2-00.03",
+  "L2-03.01",
+  "L2-03.02",
+  "L2-03.03",
+  "L2-04.01",
+  "L2-04.03",
+  "L2-04.05",
+  "L2-04.08",
+  "L2-05.02",
+  "L2-09.02",
+  "L2-09.03",
+  "L2-09.05",
+  "L2-09.06",
+  "L2-09.07",
+  "L2-09.09",
+  "L2-10.01",
+  "L2-10.04",
+  "L2-11.01",
+  "L2-11.03",
+  "L2-12.01",
+  "L2-12.04",
+  "L2-13.02",
+  "L2-14.01",
+  "L2-14.04",
+  "L2-15.02",
+  "L2-15.04",
+  "L2-15.05",
+  "L2-16.01",
+  "L2-16.02",
+  "L2-17.01",
+  "L2-17.02",
+  "L2-17.04",
+  "L2-23.02",
+  "L2-23.03",
+  "L2-23.04",
+  "L2-23.06",
+  "L2-25.04",
+  "L2-25.05",
+  "L2-26.01",
+  "L2-27.03",
+  "L2-27.04",
+  "L2-27.08",
+  "L2-28.01",
+  "L2-28.02",
+  "L2-28.03"
+ ],
+ "importance_3_conditional_ml": [
+  "L2-30.02",
+  "L2-30.03"
+ ],
+ "parameter_scope_overrides": {
+  "L2-03.02.build_environment_toolchain_versions": "dhf",
+  "L2-03.02.build_date": "dhf",
+  "L2-03.02.archive_location_ref": "dhf",
+  "L2-03.02.build_hash_or_signature": "dhf",
+  "L2-03.03.changed_since_previous_tested_version": "dhf",
+  "L2-03.04.last_change_request_implemented_id": "dhf",
+  "L2-03.04.verification_complete_attestation_date": "dhf",
+  "L2-04.04.evaluation_date": "dhf",
+  "L2-04.09.information_sources": "dhf",
+  "L2-04.09.review_trigger_and_frequency": "dhf",
+  "L2-05.01.trace_tool_and_export_date": "dhf",
+  "L2-05.02.requirement_version_or_change_date": "dhf",
+  "L2-05.04.srs_approver": "dhf",
+  "L2-05.04.requirements_changed_after_test_execution": "dhf",
+  "L2-07.03.detailed_design_verification_date": "dhf",
+  "L2-08.02.status_accounting_records_present": "dhf",
+  "L2-08.02.source_code_custody_method": "dhf",
+  "L2-08.02.external_component_list_reproducible": "dhf",
+  "L2-08.04.tool_list_with_versions": "dhf",
+  "L2-09.01.test_plan_version": "dhf",
+  "L2-09.01.test_levels_planned": "dhf",
+  "L2-09.01.exit_criteria": "dhf",
+  "L2-09.01.plan_approval_date": "dhf",
+  "L2-09.02.protocol_approver": "dhf",
+  "L2-09.03.test_tools_and_versions": "dhf",
+  "L2-09.03.executor_identity": "dhf",
+  "L2-09.03.executor_independence": "dhf",
+  "L2-09.03.retest_of_run_id": "dhf",
+  "L2-09.03.unit_acceptance_criteria_ref": "dhf",
+  "L2-09.04.simulators_stubs": "dhf",
+  "L2-09.04.test_data_set_ids_versions": "dhf",
+  "L2-09.04.environment_readiness_date": "dhf",
+  "L2-09.05.test_tools_and_versions": "dhf",
+  "L2-09.05.executor_identity": "dhf",
+  "L2-09.05.executor_independence": "dhf",
+  "L2-09.05.retest_of_run_id": "dhf",
+  "L2-10.01.build_id": "dhf",
+  "L2-10.05.analysis_date": "dhf",
+  "L2-11.01.root_cause": "dhf",
+  "L2-11.03.source_system_and_query": "dhf",
+  "L2-11.03.closed_since_previous_list_count": "dhf",
+  "L2-12.01.release_date": "dhf",
+  "L2-13.05.qualification_evidence": "dhf",
+  "L2-15.02.evaluation_date": "dhf",
+  "L2-15.02.control_effective_version_or_date": "dhf",
+  "L2-15.02.first_present_version_or_date": "dhf",
+  "L2-16.01.generation_tool_and_version": "dhf",
+  "L2-16.02.component_hash": "dhf",
+  "L2-28.04.underlying_evidence_ids": "dhf",
+  "L2-28.04.evidence_completion_date": "dhf",
+  "L2-09.05.software_version_under_test": "submission",
+  "L2-09.05.execution_start_date": "submission",
+  "L2-09.05.execution_end_date": "submission",
+  "L2-09.05.result": "submission",
+  "L2-09.05.hardware_os_platform_config": "submission",
+  "L2-09.05.ots_soup_versions_in_test_config": "submission",
+  "L2-09.05.deviation_from_protocol": "submission",
+  "L2-09.06.change_id": "submission",
+  "L2-09.06.regression_analysis_id": "submission",
+  "L2-09.06.tests_selected_for_rerun": "submission",
+  "L2-09.06.regression_run_ids": "submission",
+  "L2-12.09.developer_assessment_ref": "submission",
+  "L2-12.09.support_mechanism": "submission",
+  "L2-23.01.tester_org_and_independence": "submission",
+  "L2-23.02.tester_org_and_independence": "submission",
+  "L2-23.03.tester_org_and_independence": "submission",
+  "L2-23.03.tools_versions_settings": "submission",
+  "L2-23.04.tester_org_and_independence": "submission",
+  "L2-23.04.duration_effort": "submission",
+  "L2-23.04.methodology": "submission",
+  "L2-23.04.original_third_party_report_provided": "submission",
+  "L2-28.06.lab_name": "submission",
+  "L2-28.06.lab_address": "submission",
+  "L2-28.06.accreditation_body_and_scope": "submission",
+  "L2-28.08.underlying_data_ids": "submission",
+  "L2-17.01.vulnerability_source_db_and_query_date": "submission",
+  "L2-13.01.plan_approval_date": "submission",
+  "L2-14.01.threat_model_date": "submission"
+ },
+ "scope_rules": [
+  "Default scope is 'submission' for every parameter FDA-SW Table 1, FDA-OTS III, FDA-CY V-VII or FDA-STD IV.A(1)-(2) names; 'dhf' (design and development file / QMS record, ISO 13485:2016 7.3.10 via 21 CFR 820.10) for parameters whose only source is a retention clause (IEC 62304 5.6.7 b), 5.7.5 b), 5.1.10, 8.2) or an FDA 'via the DHF ... FDA may request' sentence (FDA-SW VI.F Basic, FDA-OTS III.D Basic, FDA-STD IV.A).",
+  "A missing 'dhf'-scope parameter is reported as 'not in submission; available on request' and lowers confidence; it never lowers completeness.",
+  "Build-identity fallback: when the sponsor uses no build-id scheme, the version string satisfies release_build_id, build_id_under_test, build_tested, list_build_id and described_build_id, with a confidence qualifier 'build identity by version only'."
+ ],
+ "required_enhanced_overrides": {
+  "L2-03.02.build_date": false,
+  "L2-16.01.described_build_id": false,
+  "L2-23.04.tools_versions_settings": false,
+  "L2-04.04.initial_probability": false,
+  "L2-04.10.document_id": false
+ },
+ "l2_additions": [
+  {
+   "parent_l1": "L1-01",
+   "id": "L2-01.02",
+   "title": "IEC 62304 software safety classification and rationale",
+   "expectation": "Each software system (and, where decomposed, each software item) carries a software safety class A, B or C assigned from the worst-case severity of the hazardous situation it can contribute to, with the 100 percent failure-probability assumption, any reduction via hardware risk controls, and segregation claims used for item-level classification. The class is distinct from the FDA Documentation Level and decides which IEC 62304 clauses a DoC can claim.",
+   "clauses": [
+    {
+     "src": "STD-62304",
+     "loc": "4.3 a)-g)"
+    },
+    {
+     "src": "STD-62304",
+     "loc": "5.3.5"
+    },
+    {
+     "src": "AUTH-FDA-SW",
+     "loc": "V (Documentation Level is not the 62304 class)"
+    },
+    {
+     "src": "AUTH-FDA-SW",
+     "loc": "VI.G (DoC to specific clauses)"
+    }
+   ],
+   "entity_types": [
+    "software_version",
+    "design_component",
+    "document"
+   ],
+   "importance": 2,
+   "parameters": [
+    {
+     "name": "software_system_id",
+     "type": "id",
+     "required_enhanced": true,
+     "scope": "submission",
+     "check": "must exist in architecture (L2-06.01) or equal the module software system",
+     "check_type": "mechanical"
+    },
+    {
+     "name": "safety_class",
+     "type": "enum",
+     "required_enhanced": true,
+     "scope": "submission",
+     "check": "A|B|C; Enhanced Documentation Level with class A is a contradiction to query (CC-28)",
+     "check_type": "mechanical"
+    },
+    {
+     "name": "worst_case_hazardous_situation_ids",
+     "type": "list",
+     "required_enhanced": true,
+     "scope": "submission",
+     "check": "each must exist in L2-04.03; severity must support the class (C = death or serious injury)",
+     "check_type": "mechanical"
+    },
+    {
+     "name": "hardware_risk_controls_relied_on",
+     "type": "list",
+     "required_enhanced": false,
+     "scope": "submission",
+     "check": "if class reduced from C to B or B to A, each control must exist in L2-04.05 with control_type not 'information for safety' and be external to the software system",
+     "check_type": "mechanical"
+    },
+    {
+     "name": "item_level_classes_and_segregation",
+     "type": "list",
+     "required_enhanced": false,
+     "scope": "submission",
+     "check": "each segregated item must appear in L2-06.02 with a segregation_claim and a verification reference (62304 5.3.5)",
+     "check_type": "judgment"
+    },
+    {
+     "name": "classification_rationale_ref",
+     "type": "text",
+     "required_enhanced": true,
+     "scope": "submission",
+     "check": "",
+     "check_type": "judgment"
+    }
+   ]
+  },
+  {
+   "parent_l1": "L1-08",
+   "id": "L2-08.05",
+   "title": "Legacy software rationale (IEC 62304 4.4)",
+   "expectation": "When the sponsor invokes 4.4 for software developed before 62304 was applied: post-production feedback assessed, risk management of continued use performed, gap analysis of deliverables against 5.2, 5.3, 5.7 and clause 7 with the minimum deliverable being system test records (5.7.5), a gap-closure plan executed, and the rationale for continued use documented in the risk management file.",
+   "clauses": [
+    {
+     "src": "STD-62304",
+     "loc": "4.4.1"
+    },
+    {
+     "src": "STD-62304",
+     "loc": "4.4.2 a)-b)"
+    },
+    {
+     "src": "STD-62304",
+     "loc": "4.4.3 a)-c)"
+    },
+    {
+     "src": "STD-62304",
+     "loc": "4.4.4 a)-c)"
+    },
+    {
+     "src": "STD-62304",
+     "loc": "4.4.5"
+    }
+   ],
+   "entity_types": [
+    "software_version",
+    "design_component",
+    "document"
+   ],
+   "importance": 2,
+   "parameters": [
+    {
+     "name": "legacy_item_ids",
+     "type": "list",
+     "required_enhanced": false,
+     "scope": "submission",
+     "check": "each must exist in L2-06.02 / L2-03.03 (conditional: only when 4.4 is invoked)",
+     "check_type": "mechanical"
+    },
+    {
+     "name": "feedback_assessment_ref",
+     "type": "text",
+     "required_enhanced": false,
+     "scope": "submission",
+     "check": "62304 4.4.2 a)",
+     "check_type": "judgment"
+    },
+    {
+     "name": "gap_analysis_ref",
+     "type": "text",
+     "required_enhanced": false,
+     "scope": "submission",
+     "check": "must cover 5.2, 5.3, 5.7 and clause 7 deliverables (4.4.3)",
+     "check_type": "mechanical"
+    },
+    {
+     "name": "system_test_records_present",
+     "type": "bool",
+     "required_enhanced": false,
+     "scope": "submission",
+     "check": "must be true (4.4.3 c) minimum deliverable; records per 5.7.5 in L2-09.05)",
+     "check_type": "mechanical"
+    },
+    {
+     "name": "gap_closure_plan_ref",
+     "type": "text",
+     "required_enhanced": false,
+     "scope": "dhf",
+     "check": "4.4.4 a)",
+     "check_type": "judgment"
+    },
+    {
+     "name": "rationale_in_rmf",
+     "type": "bool",
+     "required_enhanced": false,
+     "scope": "submission",
+     "check": "4.4.5: rationale recorded in the risk management file (L1-04)",
+     "check_type": "mechanical"
+    }
+   ]
+  },
+  {
+   "parent_l1": "L1-04",
+   "id": "L2-04.10",
+   "title": "Safety traceability matrix document (hazard - requirement - design - test)",
+   "expectation": "Where the HAZ -> SRS/SDS -> UT/INT/SYS trace is presented as a separate document (FDA-SW VI.C(2)), the document is identified with version, export date and the software version it covers, and its rows reconcile with the per-artifact links captured in L2-04.05, L2-05.02, L2-07.01 and L2-09.02.",
+   "clauses": [
+    {
+     "src": "AUTH-FDA-SW",
+     "loc": "VI.C(2) Risk Control Measures (traceability; separate document permitted)"
+    },
+    {
+     "src": "STD-14971",
+     "loc": "4.5"
+    },
+    {
+     "src": "STD-62304",
+     "loc": "5.1.1 f) traceability; 7.3.3"
+    }
+   ],
+   "entity_types": [
+    "document",
+    "hazard",
+    "requirement",
+    "test_case"
+   ],
+   "importance": 2,
+   "parameters": [
+    {
+     "name": "document_id",
+     "type": "id",
+     "required_enhanced": false,
+     "scope": "submission",
+     "check": "optional document; when absent the trace must still be recoverable from L2-04.05 links",
+     "check_type": "mechanical"
+    },
+    {
+     "name": "matrix_version_and_export_date",
+     "type": "text",
+     "required_enhanced": false,
+     "scope": "submission",
+     "check": "export date must be on/after the risk report date minus the tolerance set for the case and on/before A.module_submission_date",
+     "check_type": "mechanical"
+    },
+    {
+     "name": "software_version_covered",
+     "type": "version",
+     "required_enhanced": false,
+     "scope": "submission",
+     "check": "must equal A.proposed_version",
+     "check_type": "mechanical"
+    },
+    {
+     "name": "rows_reconcile_with_artifacts",
+     "type": "bool",
+     "required_enhanced": false,
+     "scope": "submission",
+     "check": "set comparison against L2-04.05.implementing_requirement_ids / implementation_verification_test_ids (CC-02); any left-only or right-only row is a finding",
+     "check_type": "mechanical"
+    },
+    {
+     "name": "untraced_hazards",
+     "type": "list",
+     "required_enhanced": false,
+     "scope": "submission",
+     "check": "must be empty or each justified (ISO 14971 4.5)",
+     "check_type": "mechanical"
+    }
+   ]
+  }
+ ],
+ "l2_merges": [
+  {
+   "into": "L2-21.01",
+   "merge": [
+    "L2-21.02",
+    "L2-21.03",
+    "L2-21.04",
+    "L2-21.05",
+    "L2-21.06",
+    "L2-21.07",
+    "L2-21.08"
+   ],
+   "note": "v3 collapse for the first synthetic test: one L2 'Security controls by category' with parameter category (enum: authentication|authorization|cryptography|code_data_execution_integrity|confidentiality|event_detection_logging|resiliency_recovery|updatability_patchability (Appendix 1 heading: Firmware and Software Updates)), plus control_id, security_requirement_ids, implementation_ref, verification_test_ids, applies_to_assets_interfaces, not_applicable_rationale. Category-specific parameters (algorithms, key management, roles, log protection, rollback behaviour) return when L1-21 is expanded. CC-04 keeps the S3 'implemented and tested for effectiveness' test (FDA-CY V.B.1). Keep L2-21.09 separate."
+  },
+  {
+   "into": "L2-24.01",
+   "merge": [
+    "L2-24.02",
+    "L2-24.03",
+    "L2-24.04"
+   ],
+   "note": "Integration information (FDA-CY VI.A bullets 1-4): recommended controls, user diagrams, port/interface list, infrastructure and incident response. Keep port_or_interface, direction, approved_endpoints as named parameters because CC-15 joins on them; add coverage enum for bullets 1, 2, 4."
+  },
+  {
+   "into": "L2-24.05",
+   "merge": [
+    "L2-24.06",
+    "L2-24.10",
+    "L2-24.11",
+    "L2-24.13"
+   ],
+   "note": "Software identity and lifecycle (VI.A bullets 5, 6, 13, 14 and the MDS2 paragraph): SBOM availability and labeled SBOM version (CC-05), download/update procedure, device and component end of support with risk-transfer process (CC-14), decommissioning; MDS2 as optional vehicle."
+  },
+  {
+   "into": "L2-24.07",
+   "merge": [
+    "L2-24.08",
+    "L2-24.09"
+   ],
+   "note": "Operational security information (VI.A bullets 7-12): event response and notification, logging/forensics, critical-function protection, backup/restore, configuration recovery, secure shipped configuration and risk-increasing user changes; one coverage enum plus free-text refs. L2-24.12 (transferred risks as HF tasks) stays separate because it joins L1-27 (CC-16)."
+  },
+  {
+   "into": "L2-25.01",
+   "merge": [
+    "L2-25.02",
+    "L2-25.03"
+   ],
+   "note": "Monitoring and identification: personnel, sources/methods/frequency incl. KEV handling, periodic security testing (FDA-CY VI.B bullets 1-4)."
+  },
+  {
+   "into": "L2-25.05",
+   "merge": [
+    "L2-25.06",
+    "L2-25.07",
+    "L2-25.09"
+   ],
+   "note": "Remediation and delivery: regular-cycle and out-of-cycle timelines with justification (524B(b)(2)(A)-(B); FDA-CY VII.C.1 'second', fn 65), update process, patching capability rate, customer communication, support horizon (A.device_support_end), fielded-version differences (VII.C.1 'third')."
+  },
+  {
+   "into": "L2-25.04",
+   "merge": [
+    "L2-25.08"
+   ],
+   "note": "CVD and vulnerability handling: CVD policy and intake (VI.B bullet 8; VII.C.1 'first'; 524B(b)(1)), handling phases (ISO/IEC 30111 7.1.2-7.1.7, IEC 81001-5-1 9.2-9.5; TIR97 Annex C). Record the declared standard edition: the library 29147:2018 and 30111:2019 are not the recognized editions (13-77 is 2014; 13-78 is 2013)."
+  }
+ ],
+ "l2_corrections": [
+  {
+   "id": "L2-09.05",
+   "field": "parameters[executor_identity].check",
+   "fix": "cite IEC 62304 5.7.5 g) only (5.6.7 c) is the integration record; keep it on L2-09.03)"
+  },
+  {
+   "id": "L2-09.05",
+   "field": "parameters[hardware_os_platform_config].check",
+   "fix": "'must be a member of A.supported_platforms, or a documented representative platform with rationale (CC-18)'"
+  },
+  {
+   "id": "L2-09.05",
+   "field": "parameters[build_id_under_test].check",
+   "fix": "add fallback: when no build-id scheme exists, software_version_under_test satisfies the identity with the qualifier 'build identity by version only'"
+  },
+  {
+   "id": "L2-23.04",
+   "field": "parameters[tools_versions_settings].required_enhanced",
+   "fix": "false; FDA-CY fn 47 says tool details 'may include' name, version, settings and attaches to the vulnerability-testing bullet; keep required=true on L2-23.03"
+  },
+  {
+   "id": "L2-23.04",
+   "field": "parameters[build_tested].check",
+   "fix": "owner-derived; add the version fallback; source rule FDA-CY V.C and VII.D, FDA-SW VI.I (not FDA-STD IV.A)"
+  },
+  {
+   "id": "L2-28.01",
+   "field": "parameters[product_identification].check",
+   "fix": "'device identification equals the module device description (L2-00.02); software version, when stated, equals A.proposed_version' (process-standard DoCs identify the device, not a build)"
+  },
+  {
+   "id": "L2-04.05",
+   "field": "parameters",
+   "fix": "add completeness_review_recorded (bool, required, mechanical: must be true; ISO 14971 7.6) or place it on L2-04.08"
+  },
+  {
+   "id": "L2-12.04",
+   "field": "expectation",
+   "fix": "state both triggers: FDA-OTS III.A.5 and III.C ask for a current defect list for every OTS item; IEC 62304 7.1.3 requires the hazard-sequence evaluation only when SOUP failure is a potential cause of a hazardous situation (Class B, C)"
+  },
+  {
+   "id": "L2-12.04",
+   "field": "clauses",
+   "fix": "add {src: AUTH-FDA-CY, loc: V.A.4(b) known vulnerabilities of components} as the basis for security_vulnerabilities_cross_checked"
+  },
+  {
+   "id": "L2-16.01",
+   "field": "parameters[described_build_id].required_enhanced",
+   "fix": "false; NTIA binds the primary component by version, FDA-CY V.A.4(b) adds no build id; keep the check when present"
+  },
+  {
+   "id": "L2-16.01",
+   "field": "parameters[sbom_generation_date].check",
+   "fix": "cite NTIA Minimum Elements 'Timestamp' (date/time of SBOM data assembly); ordering vs code freeze stays S2 (CC-12 c)"
+  },
+  {
+   "id": "L2-16.02",
+   "field": "parameters[level_of_support].check",
+   "fix": "accept the attribute in the SBOM or in a separate addendum (FDA-CY V.A.4(b): 'may ... provide it separately, such as in an addendum'); same for end_of_support_date"
+  },
+  {
+   "id": "L2-03.02",
+   "field": "parameters[build_environment_toolchain_versions].check",
+   "fix": "'must appear in the controlled supporting items (IEC 62304 5.1.10: compiler/assembler versions, make files, environment settings) or L2-08.04 tool list'; not in the SBOM"
+  },
+  {
+   "id": "L2-03.02",
+   "field": "parameters[release_build_id].check",
+   "fix": "add the version fallback and the qualifier; no cited clause requires a build id (62304 5.8.4 requires the version)"
+  },
+  {
+   "id": "L2-03.04",
+   "field": "clauses",
+   "fix": "replace STD-62304 8.2.1 with 5.1.11 (configuration items under control before verification) and 8.2.3 (verify changes); 5.8.6 is tangential and may be dropped"
+  },
+  {
+   "id": "L2-11.03",
+   "field": "clauses",
+   "fix": "drop STD-62304 9.6 (trend analysis supports no parameter); add AUTH-FDA-SW VI.J and VI.H(1) ('anomalies acceptably deferred ... for the candidate release version') as the basis for list_build_id/list_software_version"
+  },
+  {
+   "id": "L2-10.04",
+   "field": "parameters[last_fully_tested_version].check",
+   "fix": "'must equal the latest version in L2-10.01 whose system test set passed in full' (replace the 'modal' heuristic)"
+  },
+  {
+   "id": "L2-13.01",
+   "field": "clauses",
+   "fix": "add STD-SW96 6.2 and STD-TIR57 3.1.1 for safety_interface_described; cite SW96 4.4 1g for acceptability criteria; uses_probability_of_attack rests on the SIS note and FDA-CY V.A.2, not on SW96 text"
+  },
+  {
+   "id": "L2-17.04",
+   "field": "parameters[kev_vulnerability_ids_present_in_release].check_type",
+   "fix": "mechanical for emptiness; justification of any listed id is judgment"
+  },
+  {
+   "id": "L2-23.05",
+   "field": "parameters[independence_level]",
+   "fix": "enum none|independent_person|independent_department|independent_organization (IEC 62443-4-1 9.6 definitions); check: when 62443-4-1 is the claimed SPDF, compare with Table 3 (security requirements and threat mitigation testing: independent department; abuse case, attack surface analysis, known-vulnerability scanning: independent person; static analysis and SCA: none; penetration testing: independent department or organization); otherwise judgment against IEC 81001-5-1 5.7.5"
+  },
+  {
+   "id": "L2-00.03",
+   "field": "expectation",
+   "fix": "add the condition: amendment expected when review staff judge the post-acceptance modification a major change after informal discussion (FDA-MODPMA VI.C(4)); otherwise updates go in the final module"
+  },
+  {
+   "id": "L2-04.04",
+   "field": "parameters[initial_probability].check",
+   "fix": "'1 or not estimable' is the default for software failure (FDA-SW fn 45); a value below 1 requires probability_basis"
+  },
+  {
+   "id": "L2-05.04",
+   "field": "clauses",
+   "fix": "'AUTH-FDA-SW VI.D fn 52 (cites former 21 CFR 820.30(c); current hook ISO 13485:2016 7.3.3 via 21 CFR 820.10 QMSR, effective 2026-02-02)'"
+  },
+  {
+   "id": "L2-09.09",
+   "field": "clauses",
+   "fix": "add ISO 13485:2016 7.3.7 design validation (via QMSR) as the general hook; IEC 82304-1 6.1-6.3 is conditional on a software-only health software product"
+  },
+  {
+   "id": "L2-21.08",
+   "field": "title",
+   "fix": "'Updatability and Patchability (Appendix 1 heading: Firmware and Software Updates)' so either sponsor heading matches FDA-CY V.B.1 and Appendix 1"
+  },
+  {
+   "id": "L2-29.06",
+   "field": "placement",
+   "fix": "move the IEC 60601-1 14.13 network information into the collapsed labeling L2 (L2-24.05 group) and mark conditional on PEMS"
+  },
+  {
+   "id": "ALL-L1",
+   "field": "note",
+   "fix": "move the repeated eSTAR paragraph (31 copies) to a top-level field; keep only the L1-27 and L1-28 specific sentences"
+  }
+ ],
+ "chain_corrections": [
+  {
+   "chain": "CC-06",
+   "row": "sets",
+   "fix": "replace 'these sets are equal' with: unresolved = security-assessed (FDA-CY V.A.5 applies to the whole list); deferred-in-test-reports is a subset of unresolved (anomalies from reviews, analysis or use are unresolved without being deferred by a test report, FDA-SW VI.J). A deferred anomaly absent from the unresolved list is the S3 break."
+  },
+  {
+   "chain": "CC-04",
+   "row": "fixed_in_build",
+   "fix": "build ids are compared exactly (normalization rules); define 'at or before' through the order of entries in L2-10.01, not by string comparison"
+  },
+  {
+   "chain": "CC-05",
+   "row": "L2-14.01.configuration_covered",
+   "fix": "threat model is scoped to an architecture/configuration (IEC 81001-5-1 7.2 'current development scope'), not a release string; treat as descriptive (S2) and rely on CC-12 r for currency; same for L2-28.04.software_version_covered_by_doc when the DoC is to a process standard"
+  },
+  {
+   "chain": "CC-12",
+   "row": "c",
+   "fix": "S2 (not S3) for L2-16.01.sbom_generation_date earlier than A.code_freeze_date; content mismatch is caught by CC-11"
+  },
+  {
+   "chain": "CC-12",
+   "row": "f",
+   "fix": "source rule: FDA-CY V.C (reports submitted), FDA-CY VII.D (changes that may impact cybersecurity), FDA-SW VI.I; FDA-STD IV.A governs DoC testing, not penetration tests"
+  },
+  {
+   "chain": "CC-12",
+   "row": "n",
+   "fix": "mark source as 'by analogy to FDA-SW VI.C(1)'; SW96 4.4 1g requires criteria in the plan but states no ordering"
+  },
+  {
+   "chain": "CC-12",
+   "row": "o",
+   "fix": "S3 candidate with reviewer qualifier: FDA-MODPMA VI.C(4) makes the amendment conditional on a 'major change' judgement after informal discussion"
+  },
+  {
+   "chain": "CC-12",
+   "row": "p",
+   "fix": "IEC 62304 7.1.3 requires version relevance, not a date order; replace with the version-equality test of CC-03 and keep review age as judgment; S1 or delete"
+  },
+  {
+   "chain": "CC-23",
+   "row": "type",
+   "fix": "Mixed: independence level per test type is mechanical against IEC 62443-4-1 Table 3 when that SPDF is claimed; adequacy of objectivity means (IEC 81001-5-1 5.7.5) stays judgment"
+  },
+  {
+   "chain": "CC-22",
+   "row": "joins",
+   "fix": "add L2-09.08.protocol_level_pass_fail_table to the recount set"
+  },
+  {
+   "chain": "CC-12",
+   "row": "new s",
+   "fix": "L2-16.01.sbom_generation_date <= L2-17.01.vulnerability_source_db_and_query_date and <= L2-17.01.kev_check_date; FDA-CY V.A.4(b); S2"
+  },
+  {
+   "chain": "CC-12",
+   "row": "new t",
+   "fix": "L2-09.01.plan_approval_date <= first L2-09.02.protocol_approval_date; IEC 62304 5.1.6 verification planning; S1"
+  },
+  {
+   "chain": "CC-12",
+   "row": "new u",
+   "fix": "L2-09.06.regression_analysis_date >= date of the change analysed (L2-10.01.version_date) and <= start of regression_run_ids; FDA-SW VI.H(1) bullet 3; S2"
+  },
+  {
+   "chain": "CC-12",
+   "row": "new v",
+   "fix": "L2-27.08.test_dates end <= L2-04.08.report_date; ISO 14971 8-9 after all controls verified, HF validation is effectiveness evidence for use-related controls; S2"
+  },
+  {
+   "chain": "CC-12",
+   "row": "new w",
+   "fix": "each L2-11.01.disposition_date <= L2-11.03.extraction_date; S1"
+  }
+ ],
+ "chain_additions": [
+  {
+   "id": "CC-26",
+   "title": "Security acceptance threshold vs residual scores",
+   "condition": "For every L2-15.02 entry, post_mitigation_score above L2-15.01.acceptance_threshold implies the vulnerability_id is in L2-15.04.residual_unacceptable_ids with a benefit-risk reference, and L2-15.04.overall_conclusion is consistent (no 'acceptable' conclusion with unaccepted residuals). Scoring_system_and_version must be one the SIS accepts (CVSS v4.0 13-140; v3.1 13-142 until 2028-07-02; v3.0 13-116 until 2026-12-20).",
+   "mechanical": true,
+   "severity": "S3",
+   "sources": [
+    "AUTH-FDA-CY V.A.2",
+    "STD-SW96 6.1, 7.3, 8"
+   ]
+  },
+  {
+   "id": "CC-27",
+   "title": "Unresolved anomaly to risk file closure",
+   "condition": "Every L2-11.01.risk_file_link resolves to a hazardous_situation in L2-04.03; that situation's L2-04.06.open_anomaly_ids_affecting lists the anomaly; safety_effectiveness_impact uses the plan severity scale; anomalies with security_impact_assessed=true appear in L2-18.01 (when active) or carry the assessment inline.",
+   "mechanical": true,
+   "severity": "S2; S3 when the linked hazardous situation is death or serious injury",
+   "sources": [
+    "AUTH-FDA-SW VI.J",
+    "STD-62304 5.8.3, 9.5",
+    "AUTH-FDA-CY V.A.5"
+   ]
+  },
+  {
+   "id": "CC-28",
+   "title": "Software safety class vs Documentation Level vs DoC clause applicability",
+   "condition": "L2-01.02.safety_class = A with A.documentation_level = Enhanced is a contradiction to query (62304 4.3 class A: no injury possible; FDA-SW V Enhanced: death or serious injury possible before controls). Clauses claimed in a 62304 DoC (L2-28.03.clauses_claimed) must be applicable to the assigned class (e.g., 5.8.5 is Class B, C; 5.3.5 is Class C; 5.5.2-5.5.5 are B/C or C).",
+   "mechanical": true,
+   "severity": "S2",
+   "sources": [
+    "STD-62304 4.3",
+    "AUTH-FDA-SW V, VI.G",
+    "AUTH-FDA-STD IV.A(3) c-d"
+   ]
+  }
+ ],
+ "disagreements_with_coordinator": [
+  {
+   "point": 1,
+   "position": "Hold importance 3 at 45 (plus 2 conditional on ML), not 35, with a different list.",
+   "reason": "The coordinator's list keeps 'risk control verification' (L2-04.05) while dropping the plan, hazard table and report that give it meaning (FDA-SW VI.C(1)-(3)); drops unit/integration evidence (L2-09.03), the only deliverable that distinguishes Enhanced from Basic in FDA-SW Table 1; drops the security risk management report (first row of FDA-CY Appendix 4); and drops the 524B(b)(1)-(2) statutory plan items (CVD, patch timelines). Lowering L1-21/L1-22/L1-24 is agreed because CC-04 and CC-15 keep the S3 test regardless of bin importance."
+  },
+  {
+   "point": 3,
+   "position": "L1-04 must be active. Activate 18 L1 (coordinator's 13 plus L1-00, 01, 04, 13 partial, 26), with L1-21 collapsed.",
+   "reason": "Module scope names risk management; FDA-SW Table 1 lists the risk management file at both levels; CC-02, CC-10 (FDA-CY V.A.2 security-to-safety transfer), CC-12 a/g, CC-17 and the IEC 62304 7.1.3 condition in CC-03 all join into L1-04; cost is 46 parameters. L1-00, L1-01 and L1-26 are tiny anchor sources (A.module_submission_date, A.documentation_level, 524B screen) without which CC-12 k, CC-17 and the coordinator's own importance-3 '524B screen' have no home."
+  },
+  {
+   "point": 2,
+   "position": "Agree, with the scope assigned per parameter, not per parameter name.",
+   "reason": "executor_identity and tool details are dhf-scope in L1-09 (IEC 62304 5.7.5 b) retention; FDA-SW Table 1 silent) but submission-scope in L1-23 (FDA-CY V.C: reports with tester identity and independence 'should be submitted'). The label 'dhf' should be defined as design and development file / QMS record (ISO 13485:2016 7.3.10 via QMSR), since 21 CFR 820.30(j) was repealed 2026-02-02."
+  },
+  {
+   "point": 4,
+   "position": "Agree; collapse L1-24 to three content L2 plus the HF-join L2 (L2-24.12), and L1-25 to three.",
+   "reason": "FDA-CY VI.A is a list of 'examples of information that may be included'; the chain joins (CC-05 labeled SBOM version, CC-14 end of support, CC-15 ports, CC-16 HF tasks) need named parameters, not separate L2s."
+  },
+  {
+   "point": 5,
+   "position": "Agree; place 4.3 under L1-01 (L2-01.02), 4.4 under L1-08 (L2-08.05, conditional), the trace matrix under L1-04 (L2-04.10, document optional).",
+   "reason": "The class's two uses are the Documentation-Level cross-check and DoC clause applicability (L2-28.03 already carries safety_class_or_options_assumed); FDA-SW VI.C(2) permits the trace as a separate document, so the document bin is optional while the trace content stays required through L2-04.05."
+  },
+  {
+   "point": 6,
+   "position": "Agree; one consequence recorded.",
+   "reason": "Heading-level use of IEC 62443-4-1 missed SVV-5 Table 3, which turns L2-23.05 and CC-23 from judgment into a mechanical comparison."
+  }
+ ],
+ "counts": {
+  "l2_audited": 18,
+  "l1_covered_by_audit": 15,
+  "confirmed": 7,
+  "corrected": 11,
+  "unsupported": 0,
+  "importance_3_after": 45,
+  "importance_3_conditional_ml": 2,
+  "importance_lowered": 34,
+  "importance_raised": 1,
+  "activate_l1_count": 18,
+  "dhf_scope_overrides": 50,
+  "submission_scope_overrides": 28,
+  "chain_corrections": 15,
+  "chain_additions": 3
+ }
+}

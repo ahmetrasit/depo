@@ -1,0 +1,518 @@
+{
+ "entity_recall": 0.964,
+ "entities_oracle": 250,
+ "entities_found": 241,
+ "param_fill_vs_oracle": 0.935,
+ "param_agreement_when_filled": 0.963,
+ "per_l2": {
+  "L2-01.01": {
+   "oracle": 1,
+   "found": 0,
+   "params_oracle": 2,
+   "params_found": 0,
+   "params_agree": 0,
+   "recall": 0.0
+  },
+  "L2-01.02": {
+   "oracle": 1,
+   "found": 0,
+   "params_oracle": 5,
+   "params_found": 0,
+   "params_agree": 0,
+   "recall": 0.0
+  },
+  "L2-03.01": {
+   "oracle": 1,
+   "found": 1,
+   "params_oracle": 7,
+   "params_found": 7,
+   "params_agree": 6,
+   "recall": 1.0
+  },
+  "L2-03.02": {
+   "oracle": 1,
+   "found": 1,
+   "params_oracle": 4,
+   "params_found": 4,
+   "params_agree": 3,
+   "recall": 1.0
+  },
+  "L2-03.03": {
+   "oracle": 10,
+   "found": 10,
+   "params_oracle": 128,
+   "params_found": 123,
+   "params_agree": 121,
+   "recall": 1.0
+  },
+  "L2-03.04": {
+   "oracle": 1,
+   "found": 0,
+   "params_oracle": 4,
+   "params_found": 0,
+   "params_agree": 0,
+   "recall": 0.0
+  },
+  "L2-04.03": {
+   "oracle": 8,
+   "found": 8,
+   "params_oracle": 48,
+   "params_found": 40,
+   "params_agree": 40,
+   "recall": 1.0
+  },
+  "L2-04.05": {
+   "oracle": 7,
+   "found": 7,
+   "params_oracle": 48,
+   "params_found": 41,
+   "params_agree": 41,
+   "recall": 1.0
+  },
+  "L2-04.08": {
+   "oracle": 1,
+   "found": 1,
+   "params_oracle": 4,
+   "params_found": 4,
+   "params_agree": 3,
+   "recall": 1.0
+  },
+  "L2-05.02": {
+   "oracle": 24,
+   "found": 24,
+   "params_oracle": 168,
+   "params_found": 165,
+   "params_agree": 165,
+   "recall": 1.0
+  },
+  "L2-05.03": {
+   "oracle": 6,
+   "found": 6,
+   "params_oracle": 18,
+   "params_found": 12,
+   "params_agree": 12,
+   "recall": 1.0
+  },
+  "L2-09.02": {
+   "oracle": 39,
+   "found": 39,
+   "params_oracle": 241,
+   "params_found": 241,
+   "params_agree": 241,
+   "recall": 1.0
+  },
+  "L2-09.03": {
+   "oracle": 8,
+   "found": 8,
+   "params_oracle": 72,
+   "params_found": 64,
+   "params_agree": 64,
+   "recall": 1.0
+  },
+  "L2-09.05": {
+   "oracle": 41,
+   "found": 41,
+   "params_oracle": 455,
+   "params_found": 414,
+   "params_agree": 414,
+   "recall": 1.0
+  },
+  "L2-09.06": {
+   "oracle": 1,
+   "found": 1,
+   "params_oracle": 4,
+   "params_found": 4,
+   "params_agree": 3,
+   "recall": 1.0
+  },
+  "L2-09.07": {
+   "oracle": 1,
+   "found": 1,
+   "params_oracle": 6,
+   "params_found": 6,
+   "params_agree": 5,
+   "recall": 1.0
+  },
+  "L2-09.08": {
+   "oracle": 1,
+   "found": 0,
+   "params_oracle": 3,
+   "params_found": 0,
+   "params_agree": 0,
+   "recall": 0.0
+  },
+  "L2-10.01": {
+   "oracle": 4,
+   "found": 4,
+   "params_oracle": 21,
+   "params_found": 21,
+   "params_agree": 20,
+   "recall": 1.0
+  },
+  "L2-10.02": {
+   "oracle": 4,
+   "found": 4,
+   "params_oracle": 20,
+   "params_found": 20,
+   "params_agree": 20,
+   "recall": 1.0
+  },
+  "L2-10.04": {
+   "oracle": 1,
+   "found": 0,
+   "params_oracle": 3,
+   "params_found": 0,
+   "params_agree": 0,
+   "recall": 0.0
+  },
+  "L2-11.01": {
+   "oracle": 6,
+   "found": 6,
+   "params_oracle": 44,
+   "params_found": 38,
+   "params_agree": 35,
+   "recall": 1.0
+  },
+  "L2-11.03": {
+   "oracle": 1,
+   "found": 0,
+   "params_oracle": 5,
+   "params_found": 0,
+   "params_agree": 0,
+   "recall": 0.0
+  },
+  "L2-12.01": {
+   "oracle": 6,
+   "found": 6,
+   "params_oracle": 125,
+   "params_found": 119,
+   "params_agree": 117,
+   "recall": 1.0
+  },
+  "L2-12.04": {
+   "oracle": 6,
+   "found": 6,
+   "params_oracle": 125,
+   "params_found": 119,
+   "params_agree": 117,
+   "recall": 1.0
+  },
+  "L2-12.05": {
+   "oracle": 2,
+   "found": 2,
+   "params_oracle": 43,
+   "params_found": 41,
+   "params_agree": 41,
+   "recall": 1.0
+  },
+  "L2-13.02": {
+   "oracle": 1,
+   "found": 1,
+   "params_oracle": 5,
+   "params_found": 5,
+   "params_agree": 5,
+   "recall": 1.0
+  },
+  "L2-14.01": {
+   "oracle": 1,
+   "found": 0,
+   "params_oracle": 4,
+   "params_found": 0,
+   "params_agree": 0,
+   "recall": 0.0
+  },
+  "L2-14.04": {
+   "oracle": 8,
+   "found": 8,
+   "params_oracle": 40,
+   "params_found": 40,
+   "params_agree": 40,
+   "recall": 1.0
+  },
+  "L2-15.02": {
+   "oracle": 4,
+   "found": 4,
+   "params_oracle": 32,
+   "params_found": 32,
+   "params_agree": 32,
+   "recall": 1.0
+  },
+  "L2-15.05": {
+   "oracle": 2,
+   "found": 2,
+   "params_oracle": 18,
+   "params_found": 18,
+   "params_agree": 18,
+   "recall": 1.0
+  },
+  "L2-16.01": {
+   "oracle": 1,
+   "found": 0,
+   "params_oracle": 6,
+   "params_found": 0,
+   "params_agree": 0,
+   "recall": 0.0
+  },
+  "L2-16.02": {
+   "oracle": 14,
+   "found": 14,
+   "params_oracle": 177,
+   "params_found": 171,
+   "params_agree": 169,
+   "recall": 1.0
+  },
+  "L2-17.01": {
+   "oracle": 3,
+   "found": 3,
+   "params_oracle": 24,
+   "params_found": 24,
+   "params_agree": 16,
+   "recall": 1.0
+  },
+  "L2-17.02": {
+   "oracle": 3,
+   "found": 3,
+   "params_oracle": 24,
+   "params_found": 24,
+   "params_agree": 16,
+   "recall": 1.0
+  },
+  "L2-17.04": {
+   "oracle": 1,
+   "found": 0,
+   "params_oracle": 0,
+   "params_found": 0,
+   "params_agree": 0,
+   "recall": 0.0
+  },
+  "L2-21.01": {
+   "oracle": 10,
+   "found": 10,
+   "params_oracle": 49,
+   "params_found": 49,
+   "params_agree": 49,
+   "recall": 1.0
+  },
+  "L2-23.01": {
+   "oracle": 4,
+   "found": 4,
+   "params_oracle": 28,
+   "params_found": 24,
+   "params_agree": 20,
+   "recall": 1.0
+  },
+  "L2-23.02": {
+   "oracle": 2,
+   "found": 2,
+   "params_oracle": 14,
+   "params_found": 14,
+   "params_agree": 12,
+   "recall": 1.0
+  },
+  "L2-23.03": {
+   "oracle": 1,
+   "found": 1,
+   "params_oracle": 6,
+   "params_found": 6,
+   "params_agree": 5,
+   "recall": 1.0
+  },
+  "L2-23.04": {
+   "oracle": 1,
+   "found": 1,
+   "params_oracle": 12,
+   "params_found": 11,
+   "params_agree": 10,
+   "recall": 1.0
+  },
+  "L2-23.06": {
+   "oracle": 2,
+   "found": 2,
+   "params_oracle": 12,
+   "params_found": 12,
+   "params_agree": 12,
+   "recall": 1.0
+  },
+  "L2-28.01": {
+   "oracle": 5,
+   "found": 5,
+   "params_oracle": 65,
+   "params_found": 65,
+   "params_agree": 48,
+   "recall": 1.0
+  },
+  "L2-28.03": {
+   "oracle": 5,
+   "found": 5,
+   "params_oracle": 65,
+   "params_found": 65,
+   "params_agree": 48,
+   "recall": 1.0
+  }
+ },
+ "missing_entities": [
+  "date:baseline-dates (L2-03.04)",
+  "software_version:arr software system (L2-01.02)",
+  "document:doc-level (L2-01.01)",
+  "test_report:svr-3.2-summary (L2-09.08)",
+  "software_version:final-entry (L2-10.04)",
+  "anomaly:anm-list-3.2.0 (L2-11.03)",
+  "document:sbom-3.2.0 (L2-16.01)",
+  "vulnerability:kev-check (L2-17.04)",
+  "document:tm-arr-2.1 (L2-14.01)"
+ ],
+ "extra_entities_count": 119,
+ "extra_entities_sample": [
+  "document:M3 (L2-00.01)",
+  "document:D01-Module-Cover (L2-00.02, L2-01.01)",
+  "document:D02-Software-Description (L2-00.02, L2-04.02, L2-26.01)",
+  "document:D03-Version-Configuration (L2-00.02)",
+  "document:D04-SRS (L2-00.02, L2-05.04, L2-05.01)",
+  "document:D05-Architecture (L2-00.02, L2-26.01)",
+  "document:D06-SDS (L2-00.02)",
+  "document:D07-Risk-File (L2-00.02, L2-04.08, L2-04.07, L2-11.04)",
+  "document:D08-Lifecycle-Plans (L2-00.02, L2-28.09)",
+  "document:D09-VV-Plan-Protocols (L2-00.02, L2-09.01)",
+  "document:D10-System-Verification-Report (L2-00.02)",
+  "document:D11-Unit-Integration-Summary (L2-00.02)",
+  "document:D12-Version-History (L2-00.02)",
+  "document:D13-Unresolved-Anomalies (L2-00.02, L2-11.03, L2-11.02)",
+  "document:D14-SOUP-OTS (L2-00.02)",
+  "document:D15-SBOM (L2-00.02, L2-16.01)",
+  "document:D16-Threat-Model (L2-00.02, L2-14.01)",
+  "document:D17-Security-Risk-Assessment (L2-00.02, L2-13.02, L2-15.01, L2-15.04)",
+  "document:D18-Security-Architecture (L2-00.02, L2-26.01)",
+  "document:D19-Security-Testing (L2-00.02, L2-23.04, L2-23.06)",
+  "document:D20-Vulnerability-Assessment (L2-00.02)",
+  "document:D21-Cyber-Management-Plan (L2-00.02, L2-23.07)",
+  "document:D22-Declarations (L2-00.02, L2-28.09)",
+  "document:D23-Labeling-Excerpt (L2-00.02, L2-26.01, L2-11.04, L2-04.07)",
+  "test_report:D11-Unit-Integration-Summary (L2-09.07, L2-09.03)",
+  "software_version:ANON-ARR-software-system (L2-01.02)",
+  "design_component:ANON-D02-platform-configuration (L2-12.02)",
+  "soup_component:Linux 5.15.y (L2-12.01)",
+  "soup_component:Linux 6.1.77 Halden BSP (L2-12.01)",
+  "interface:IF-01 (L2-14.02)",
+  "interface:IF-02 (L2-14.02)",
+  "interface:IF-03 (L2-14.02)",
+  "interface:IF-04 (L2-14.02)",
+  "interface:IF-05 (L2-14.02)",
+  "design_component:U-01 to U-05 (L2-01.02)",
+  "design_component:U-06 (L2-01.02, L2-14.02)",
+  "design_component:U-08 (L2-01.02, L2-14.02)",
+  "document:TM-3.2 (L2-04.10)",
+  "design_component:U-01 (L2-14.02)",
+  "design_component:U-02 (L2-14.02)"
+ ],
+ "anchors": {
+  "A.proposed_version": {
+   "oracle": "3.2.0",
+   "run": "3.2.0",
+   "agree": true,
+   "run_conflict": false
+  },
+  "A.release_build_id": {
+   "oracle": "b1187",
+   "run": "b1187",
+   "agree": true,
+   "run_conflict": true
+  },
+  "A.configuration_set": {
+   "oracle": null,
+   "run": "release baseline b1187 (CI-01 to CI-10)",
+   "agree": null,
+   "run_conflict": false
+  },
+  "A.code_freeze_date": {
+   "oracle": "2026-03-20",
+   "run": "2026-03-20",
+   "agree": true,
+   "run_conflict": false
+  },
+  "A.release_date": {
+   "oracle": "2026-04-15",
+   "run": "2026-04-15",
+   "agree": true,
+   "run_conflict": false
+  },
+  "A.test_window": {
+   "oracle": "2026-03-23 to 2026-04-08",
+   "run": "2026-03-23 to 2026-04-08",
+   "agree": true,
+   "run_conflict": false
+  },
+  "A.module_submission_date": {
+   "oracle": "2026-05-04",
+   "run": "2026-05-04",
+   "agree": true,
+   "run_conflict": false
+  },
+  "A.labeled_version": {
+   "oracle": "3.2.1",
+   "run": "3.2.0",
+   "agree": false,
+   "run_conflict": true
+  },
+  "A.sbom_build": {
+   "oracle": "b1150",
+   "run": "b1150",
+   "agree": true,
+   "run_conflict": true
+  },
+  "A.risk_file_version": {
+   "oracle": "RMR-ARR-3.2 Rev 3.1 (2026-04-12), covers 3.2.0",
+   "run": "D07-Risk-File version 3.1, approval date 2026-04-12 (software version not stated in row)",
+   "agree": false,
+   "run_conflict": true
+  },
+  "A.threat_model_version": {
+   "oracle": "TM-ARR Rev 2.1 (2026-01-30)",
+   "run": "D16-Threat-Model version 2.1, approval date 2026-01-30 (configuration not stated in row)",
+   "agree": false,
+   "run_conflict": true
+  },
+  "A.documentation_level": {
+   "oracle": "Enhanced",
+   "run": "Enhanced",
+   "agree": true,
+   "run_conflict": false
+  },
+  "A.supported_platforms": {
+   "oracle": "CS-Patch Hub v2 (Linux 5.15.y); CS-Patch Hub v3 (Linux 6.1.77)",
+   "run": "CS-Patch Hub v2 (i.MX8M, ARM64); CS-Patch Hub v3 (i.MX93, ARM64)",
+   "agree": false,
+   "run_conflict": true
+  },
+  "A.device_support_end": {
+   "oracle": "2032-12-31",
+   "run": "2032-12-31",
+   "agree": true,
+   "run_conflict": false
+  },
+  "A.prior_authorized_version": {
+   "oracle": null,
+   "run": "None",
+   "agree": null,
+   "run_conflict": false
+  },
+  "A.design_control_start_version": {
+   "oracle": "3.0.0",
+   "run": "3.0.0",
+   "agree": true,
+   "run_conflict": false
+  },
+  "A.recognition_db_snapshot": {
+   "oracle": null,
+   "run": null,
+   "agree": null,
+   "run_conflict": false
+  }
+ },
+ "run_score": {
+  "recall": 1.0,
+  "detected": 23,
+  "planted": 23,
+  "missed": [],
+  "unmatched_breaks": 83
+ }
+}

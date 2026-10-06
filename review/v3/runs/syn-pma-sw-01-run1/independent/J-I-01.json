@@ -1,0 +1,891 @@
+{
+  "job_id": "J-I-01",
+  "documents_read": [
+    "D01",
+    "D02",
+    "D03",
+    "D04",
+    "D05",
+    "D06",
+    "D07",
+    "D08",
+    "D09",
+    "D10",
+    "D11",
+    "D12",
+    "D13",
+    "D14",
+    "D15",
+    "D16",
+    "D17",
+    "D18",
+    "D19",
+    "D20",
+    "D21",
+    "D22",
+    "D23"
+  ],
+  "bins": [
+    {
+      "l1": "L1-00",
+      "expected_evidence": "A software module that maps to the FDA-accepted modular PMA shell entry (contents and projected submission date), with cover letter, table of contents, executive summary of testing and results, brief device description and principles of operation, a module DoC section and a bibliography. If the device changed after FDA accepted other modules, those modules should carry an amendment (revised executive summary, change description, list of repeated tests, supporting data).",
+      "found": [
+        {
+          "what": "Cover letter with applicant, device, proposed version 3.2.0, build b1187, submission date 2026-05-04",
+          "doc_id": "D01",
+          "locator": "header; section 1",
+          "note": "Approved 2026-05-01 by R. Lindqvist"
+        },
+        {
+          "what": "Shell mapping: 'shell entry M3 \"Software\" of the accepted PMA shell (FDA acceptance letter dated 2025-08-22)'",
+          "doc_id": "D01",
+          "locator": "section 2",
+          "note": "Acceptance letter itself and the shell's projected date for M3 are not supplied"
+        },
+        {
+          "what": "Table of contents with document version and approval date for D01-D23",
+          "doc_id": "D01",
+          "locator": "section 3",
+          "note": "All 23 version/date entries match the headers of the documents"
+        },
+        {
+          "what": "Brief device description and principles of operation (BLE acquisition, QRS detection, rhythm classification, display/portal sync)",
+          "doc_id": "D02",
+          "locator": "sections 1-4; also D01 section 1"
+        },
+        {
+          "what": "Module DoC section: five declarations with edition, recognition number, clauses, signatory, date of issue",
+          "doc_id": "D22",
+          "locator": "section 1"
+        },
+        {
+          "what": "Bridge between M1/M2 study version 3.1.4 (CS-PS-02) and proposed 3.2.0",
+          "doc_id": "D12",
+          "locator": "section 5; D01 section 2",
+          "note": "Assessment referenced to 'D07 Annex E', which is not supplied"
+        }
+      ],
+      "not_found": [
+        {
+          "what": "Executive summary of testing and results as module front matter (D01 has no testing summary; the nearest is the D10 section 2 one-line summary)",
+          "searched": "all documents D01-D23; searched 'executive summary', 'summary of testing', 'results'"
+        },
+        {
+          "what": "Bibliography / list of references",
+          "searched": "all documents D01-D23; searched 'bibliograph', 'references', 'literature'"
+        },
+        {
+          "what": "Projected submission date for M3 from the accepted shell, or record of an agreed shell change",
+          "searched": "all documents D01-D23; searched 'projected', 'shell', 'acceptance letter', 'shell change'"
+        },
+        {
+          "what": "Amendment to M1/M2 (bench/clinical modules on 3.1.4) with revised executive summary, change description and list of repeated testing, or a statement that M1/M2 were not yet accepted",
+          "searched": "all documents D01-D23; searched 'amendment', 'reopen', 'M1', 'M2', 'revised'"
+        }
+      ],
+      "parameter_concerns": [
+        {
+          "what": "D01 section 4 states 'All documents listed above describe software version 3.2.0, build b1187, unless stated otherwise', but several documents refer to other builds: D13 anomaly list on b1180, D15 SBOM and D20 vulnerability scan on b1150, D19 penetration test PT-01 on 3.1.0 b1098, D10 TR-0430 on 3.1.4 b1142",
+          "doc_id": "D01",
+          "locator": "section 4"
+        },
+        {
+          "what": "Labeling excerpt (part of the module contents) states 'This IFU applies to ... software version 3.2.1', not the proposed 3.2.0; 3.2.1 is the version to which ANM-104 is deferred (D13)",
+          "doc_id": "D23",
+          "locator": "section 1"
+        },
+        {
+          "what": "Clinical/bench modules M1/M2 rest on 3.1.4 (b1142); three post-3.1.4 changes (CH-30, CH-31, CH-32) plus SOUP changes flagged in D03 (libdsp, zlib-ng 'Changed since 3.1.4: yes') are not acknowledged as affecting the other modules",
+          "doc_id": "D01",
+          "locator": "section 2; D03 section 3; D12 section 5"
+        },
+        {
+          "what": "Date order: DoC dates of issue 2026-04-20 precede D22 approval 2026-04-28 and the DoCs state 'conformity activities completed by 2026-04-12'; D03 and D12 (approved 2026-04-16) post-date the release approval 2026-04-15 they record. Cover letter approved 2026-05-01, submission 2026-05-04: order acceptable",
+          "doc_id": "D22",
+          "locator": "section 1; D03 header and section 5"
+        }
+      ],
+      "contradictions": [
+        {
+          "what": "Proposed version 3.2.0 (D01, D03, D12, D22) vs IFU 'applies to ... software version 3.2.1' (D23 section 1), while D23 section 3 refers to 'the SBOM for version 3.2.0'",
+          "doc_ids": [
+            "D01",
+            "D23",
+            "D03",
+            "D12"
+          ]
+        },
+        {
+          "what": "D01 'All documents ... describe software version 3.2.0, build b1187' vs builds b1180 (D13), b1150 (D15, D20), b1098 (D19 PT-01), b1142 (D10 TR-0430)",
+          "doc_ids": [
+            "D01",
+            "D13",
+            "D15",
+            "D20",
+            "D19",
+            "D10"
+          ]
+        }
+      ]
+    },
+    {
+      "l1": "L1-01",
+      "expected_evidence": "A statement of Documentation Level (Enhanced for this Class III device) with device-specific rationale tied to the risk file and software description. An IEC 62304 software safety class per software system and, where decomposed, per item, derived from worst-case severity with 100% failure probability, any hardware risk-control reduction, and segregation rationale supporting lower item classes.",
+      "found": [
+        {
+          "what": "'Documentation Level: Enhanced (a failure or latent flaw could present a probability of serious injury or death; see D07 pre-control severity)'",
+          "doc_id": "D01",
+          "locator": "section 1"
+        },
+        {
+          "what": "System class C with rationale citing HS-01, HS-03 and 'no external risk control measure reduces the probability to acceptable'",
+          "doc_id": "D03",
+          "locator": "section 4"
+        },
+        {
+          "what": "100% failure-probability assumption: 'for software failures the probability of occurrence of harm is set to 1 before controls (IEC/TR 80002-1 approach)'",
+          "doc_id": "D07",
+          "locator": "section 1"
+        },
+        {
+          "what": "Item classes: U-01 to U-05 Class C; U-06 (UI) and U-08 (battery statistics) Class A by segregation",
+          "doc_id": "D03",
+          "locator": "section 4"
+        },
+        {
+          "what": "Segregation mechanism: separate process, message-queue/ZeroMQ boundary with bounded queues, watchdog W-1",
+          "doc_id": "D05",
+          "locator": "section 3; D06 section 2"
+        },
+        {
+          "what": "IEC 62304 DoC claims clauses 5.1-9 consistent with Class C",
+          "doc_id": "D22",
+          "locator": "DoC-1; D08 section 1"
+        }
+      ],
+      "not_found": [
+        {
+          "what": "Safety class for software items U-07 (Update and integrity) and U-09 (Sync service); D03 classifies U-01..U-05, U-06, U-08 only",
+          "searched": "all documents D01-D23; searched 'U-07', 'U-09', 'Class'"
+        },
+        {
+          "what": "Device-specific Documentation Level rationale beyond a one-line generic statement (no reference to specific hazardous situations or software description elements)",
+          "searched": "all documents D01-D23; searched 'Documentation Level', 'Enhanced', 'Basic'"
+        }
+      ],
+      "parameter_concerns": [
+        {
+          "what": "U-06 (UI) is classified Class A by segregation although it implements safety-related requirements SRS-006 (display within 2 s, 'Safety-related yes') and SRS-023 (manual rhythm review, 'Safety-related yes') per D06 section 1 and D04 section 2; the segregation argument addresses only the UI not blocking the Class C pipeline, not the UI's own contribution to hazardous situations",
+          "doc_id": "D03",
+          "locator": "section 4; D06 section 1; D04 section 2"
+        },
+        {
+          "what": "U-07 implements SRS-010/SEC-001 (signed package verification, RC-05 for H-05 'serious') and U-09 handles SRS-007/SRS-009 (H-08); their item classes are not stated",
+          "doc_id": "D03",
+          "locator": "section 4; D06 section 1; D07 sections 2-3"
+        },
+        {
+          "what": "Documentation Level rationale points to 'D07 pre-control severity', but D07 records severities only as 'serious'/'moderate'; the severity scale (Annex A) is not supplied, so 'serious injury or death' cannot be checked against the scale",
+          "doc_id": "D01",
+          "locator": "section 1; D07 section 2"
+        }
+      ],
+      "contradictions": []
+    },
+    {
+      "l1": "L1-03",
+      "expected_evidence": "A documented release version with naming rule visible to the user; a uniquely identified release build with build environment/procedure and integrity mechanism; a complete configuration item list (application, SOUP, model/reference data, OS/platform) with versions that agrees with the SOUP list and SBOM; recorded code freeze and release dates with release only after verification completes.",
+      "found": [
+        {
+          "what": "Proposed version 3.2.0, rule MAJOR.MINOR.PATCH per SOP-SW-004, CI build id bNNNN, shown on About screen (SRS-015)",
+          "doc_id": "D03",
+          "locator": "section 1"
+        },
+        {
+          "what": "Release build b1187, build date 2026-03-21, Yocto Kirkstone, GCC 11.4, CI image halden-ci:2026.03, reproducible-build hash '9f3c…e21a' (full hash in CM-BLD-1187)",
+          "doc_id": "D03",
+          "locator": "section 2"
+        },
+        {
+          "what": "Integrity in the field: signed monolithic image (ECDSA P-256), users cannot install OTS components",
+          "doc_id": "D14",
+          "locator": "section 5; D04 SEC-001"
+        },
+        {
+          "what": "Configuration item list CI-01..CI-10 with versions and 'Changed since 3.1.4' column",
+          "doc_id": "D03",
+          "locator": "section 3"
+        },
+        {
+          "what": "Code freeze 2026-03-20 (last CR CH-32), verification complete 2026-04-08, release approval 2026-04-15",
+          "doc_id": "D03",
+          "locator": "section 5"
+        },
+        {
+          "what": "Version history 3.0.0 b0912 to 3.2.0 b1187 with change list CH-29..CH-32 and 'tested versus released: No differences'",
+          "doc_id": "D12",
+          "locator": "sections 1, 2, 4"
+        },
+        {
+          "what": "CM plan: Git signed tags, CI build ids, baselines, CR impact analysis",
+          "doc_id": "D08",
+          "locator": "section 2"
+        }
+      ],
+      "not_found": [
+        {
+          "what": "Full release build hash / integrity value in the submission (only truncated '9f3c…e21a'; full value only in DHF record CM-BLD-1187)",
+          "searched": "all documents D01-D23; searched 'hash', 'checksum', 'CM-BLD'"
+        },
+        {
+          "what": "SBOM for the release build b1187 (supplied SBOM is for b1150) and the Hub v2 BSP SBOM SBOM-HUBV2-5.15",
+          "searched": "all documents D01-D23; searched 'b1187', 'SBOM', 'HUBV2'"
+        },
+        {
+          "what": "Configuration items for BlueZ 5.66, libcurl 8.5.0, protobuf 25.2, glibc 2.36, busybox 1.36.1 and CS-Patch firmware interface lib 2.4.0, which appear in the SBOM but not in the D03 CI list or the D14 SOUP list",
+          "searched": "all documents D01-D23; compared D03 section 3, D14 section 1, D15 section 2"
+        },
+        {
+          "what": "Build-environment/procedure document (only a summary line); SOP-SW-004 not supplied",
+          "searched": "all documents D01-D23; searched 'SOP-SW-004', 'build procedure'"
+        }
+      ],
+      "parameter_concerns": [
+        {
+          "what": "Anomaly list (D13) is for build b1180 extracted 2026-04-05, three days before the end of the test window (2026-04-08); SBOM (D15) and vulnerability scan (D20) are on build b1150 generated 2026-03-18/19, before the release build date 2026-03-21 and before code freeze 2026-03-20",
+          "doc_id": "D13",
+          "locator": "section 1; D15 section 1; D20 section 1"
+        },
+        {
+          "what": "D03 marks libdsp (CI-03) and zlib-ng (CI-04) as 'Changed since 3.1.4: yes', but D12 change list CH-29..CH-32 records no SOUP change, and D10 TR-0430 lists libdsp 4.1.2 / zlib-ng 2.1.6 in the configuration of the 3.1.4 (b1142) run",
+          "doc_id": "D03",
+          "locator": "section 3; D12 section 2; D10 section 4 TR-0430"
+        },
+        {
+          "what": "zlib-ng 2.1.6 is in the baseline, but its published anomaly list was reviewed for version scope '2.1.3' on 2025-10-02, before the stated adoption date 2026-01-10",
+          "doc_id": "D14",
+          "locator": "section 2"
+        },
+        {
+          "what": "Model parameters CI-02 versioned '3.2.0-p4' yet 'Changed since 3.1.4: no'; the label suggests a 3.2.0-specific parameter set",
+          "doc_id": "D03",
+          "locator": "section 3"
+        },
+        {
+          "what": "Hub v2 OS given as 'Linux 5.15.y' (D02) vs 5.15.148 (D03, D10); D14 SOUP list names only the 6.1.77 kernel",
+          "doc_id": "D02",
+          "locator": "section 3; D03 CI-09; D14 section 1"
+        },
+        {
+          "what": "Version shown to the user: D03 says version shown 'in the device UDI-DI production identifier' (version belongs to the production identifier, not the DI); ANM-102 'About screen shows build date in UTC not local' open; TC-040 (SRS-015) Blocked on b1187",
+          "doc_id": "D03",
+          "locator": "section 1; D13 ANM-102; D10 TR-0439"
+        },
+        {
+          "what": "Release approval 2026-04-15 precedes approval of the configuration record D03 (2026-04-16) and version history D12 (2026-04-16); release approved with failed TC-022/TC-035 and blocked TC-040 while D03 claims 'Verification complete attestation: 2026-04-08'",
+          "doc_id": "D03",
+          "locator": "section 5"
+        },
+        {
+          "what": "ANM-101 'fixed in the audit exporter configuration' after code freeze and retested on the same build id b1187, implying a configuration change without a new build identifier",
+          "doc_id": "D10",
+          "locator": "section 5; TR-0441"
+        },
+        {
+          "what": "Threat model configuration 'release candidate scope as designed in D05 Rev 2.2'; supplied architecture is D05 2.3",
+          "doc_id": "D16",
+          "locator": "section 1"
+        }
+      ],
+      "contradictions": [
+        {
+          "what": "libdsp version: 4.1.2 in D03 CI-03, D14 SOUP-01 and D10 environment vs 4.1.0 in SBOM D15",
+          "doc_ids": [
+            "D03",
+            "D14",
+            "D10",
+            "D15"
+          ]
+        },
+        {
+          "what": "D20 lists CVE-2024-2511 against 'OpenSSL 1.1.1w', a component in neither the SBOM (OpenSSL 3.0.13), D03 nor D14",
+          "doc_ids": [
+            "D20",
+            "D15",
+            "D03",
+            "D14"
+          ]
+        },
+        {
+          "what": "D12 section 4 'Last fully tested version: 3.2.0 (b1187) ... No differences' vs TC-031/032/037 carried forward from 3.1.4 b1142 (D10 section 5, D12 section 5)",
+          "doc_ids": [
+            "D12",
+            "D10"
+          ]
+        },
+        {
+          "what": "Proposed version 3.2.0 vs IFU stating 'software version 3.2.1'",
+          "doc_ids": [
+            "D03",
+            "D23"
+          ]
+        },
+        {
+          "what": "Build referenced as release candidate: b1187 (D01, D03, D10) vs b1180 'release candidate' in D13",
+          "doc_ids": [
+            "D03",
+            "D13"
+          ]
+        }
+      ]
+    },
+    {
+      "l1": "L1-04",
+      "expected_evidence": "A risk management plan with scope, responsibilities, review, acceptability criteria and overall residual risk method; documented intended use, foreseeable misuse and safety characteristics; hazards with causes (including software items and SOUP), sequences and hazardous situations; initial risk estimates; classified risk controls traced to requirements, design and tests for implementation and effectiveness; residual and overall residual risk evaluation with disclosure; a reviewed risk management report; post-production feedback; and an identified safety trace matrix reconciling with the per-artifact links.",
+      "found": [
+        {
+          "what": "Plan RMP-ARR-03 approved 2025-09-01 (S. Brandt); severity x probability matrix (Annex A); probability set to 1 for software failures",
+          "doc_id": "D07",
+          "locator": "section 1",
+          "note": "Plan contents beyond acceptability criteria are not described; Annex A not supplied"
+        },
+        {
+          "what": "Intended use / users: arrhythmia detection from single-lead patch, clinicians as users, patients wear patch",
+          "doc_id": "D01",
+          "locator": "section 1; D02 section 1"
+        },
+        {
+          "what": "Hazard table H-01..H-08 / HS-01..HS-08 with harm, severity, contributing requirements, security origin",
+          "doc_id": "D07",
+          "locator": "section 2"
+        },
+        {
+          "what": "Initial evaluation dated 2025-09-15: HS-01, -02, -03, -05, -06, -07 unacceptable; HS-04, HS-08 ALARP review",
+          "doc_id": "D07",
+          "locator": "section 2"
+        },
+        {
+          "what": "Risk controls RC-01..RC-07 with implementing requirement, design unit, implementation tests and effectiveness evidence",
+          "doc_id": "D07",
+          "locator": "section 3"
+        },
+        {
+          "what": "Residual risk: all acceptable except HS-07 ALARP (ANM-104), benefit-risk Annex C; HS-08 accepted without control (SQLite journaling, Annex D)",
+          "doc_id": "D07",
+          "locator": "section 4"
+        },
+        {
+          "what": "Overall residual risk acceptable; disclosures listed and partially present in IFU section 5 (latency, lead-off)",
+          "doc_id": "D07",
+          "locator": "section 5; D23 section 5"
+        },
+        {
+          "what": "Risk management report RMR-ARR-3.2 Rev 3.1 dated 2026-04-12, version 3.2.0, reviewed by Brandt, Meyer, Okafor",
+          "doc_id": "D07",
+          "locator": "section 6"
+        },
+        {
+          "what": "Post-production: complaint and vigilance review per SOP-PMS-002, quarterly",
+          "doc_id": "D07",
+          "locator": "section 6"
+        },
+        {
+          "what": "SOUP hazard contribution: libdsp to HS-01/HS-03, zlib-ng to HS-08",
+          "doc_id": "D14",
+          "locator": "section 3"
+        },
+        {
+          "what": "Security-to-safety transfer SR-06 -> HS-02, SR-07 -> HS-07; risk from control (lockout) to usability task T7",
+          "doc_id": "D17",
+          "locator": "sections 4, 6"
+        },
+        {
+          "what": "Security trace (threat-risk-control-requirement-test) with export date 2026-04-09",
+          "doc_id": "D17",
+          "locator": "section 7"
+        }
+      ],
+      "not_found": [
+        {
+          "what": "Reasonably foreseeable misuse",
+          "searched": "all documents D01-D23; searched 'misuse', 'foreseeable', 'off-label'"
+        },
+        {
+          "what": "Characteristics related to safety (ISO 14971 5.3)",
+          "searched": "all documents D01-D23; searched 'characteristic', 'safety characteristics'"
+        },
+        {
+          "what": "Risk control for H-02/HS-02 (false AF, 'serious', unacceptable before controls); D07 section 3 has no RC row for H-02",
+          "searched": "all documents D01-D23; searched 'H-02', 'HS-02', 'RC-'"
+        },
+        {
+          "what": "Effectiveness verification for RC-07 (entry '—')",
+          "searched": "D07 section 3; D10, D11, D19"
+        },
+        {
+          "what": "Classification of controls as inherent design / protective measure / information for safety",
+          "searched": "all documents D01-D23; searched 'protective', 'information for safety', 'inherent'"
+        },
+        {
+          "what": "Sequences of events / causes for each hazard, and software item (rather than requirement) attribution in the hazard table",
+          "searched": "all documents D01-D23; searched 'sequence', 'cause'"
+        },
+        {
+          "what": "Estimated risk values (severity/probability levels) per hazardous situation before and after controls; only acceptability statements present",
+          "searched": "D07; searched 'probability', 'matrix', 'Annex A'"
+        },
+        {
+          "what": "D07 annexes A-F (matrix, multiple-function assessment, benefit-risk, HS-08 rationale, study version bridge, lockout transfer)",
+          "searched": "all documents D01-D23; searched 'Annex'"
+        },
+        {
+          "what": "Safety traceability matrix TM-3.2 as a supplied document with version, export date and covered software version (referenced only as 'trace matrix export TM-3.2 (DHF)')",
+          "searched": "all documents D01-D23; searched 'TM-3.2', 'trace matrix', 'traceability'"
+        },
+        {
+          "what": "Statement that post-production information is fed back into the risk file; plan-level post-production activities",
+          "searched": "all documents D01-D23; searched 'post-production', 'PMS', 'feedback'"
+        },
+        {
+          "what": "Assessment of new risks introduced by safety risk controls (e.g., RC-04 suppression of classification during lead-off, RC-07 load shedding)",
+          "searched": "D07, D17; searched 'new risk', 'arising from controls'"
+        }
+      ],
+      "parameter_concerns": [
+        {
+          "what": "Effectiveness of RC-01, RC-02, RC-04 rests on 'Performance study CS-PS-02 report', which D12 states used 3.1.4 (b1142); D03 says libdsp (QRS filtering, contributes to HS-01/HS-03 per D14) changed since 3.1.4",
+          "doc_id": "D07",
+          "locator": "section 3; D12 section 5; D03 CI-03; D14 section 3"
+        },
+        {
+          "what": "Implementation verification of RC-04 by TC-008: TR-0408 executed 2026-03-24 under TP-SYS-03 v1.1 whose TC-008 approval is 2026-03-25 (execution before protocol approval)",
+          "doc_id": "D07",
+          "locator": "section 3; D09 TC-008; D10 TR-0408"
+        },
+        {
+          "what": "Implementation verification of RC-01 cites TC-032, which D10 section 5 and D12 section 5 say was carried forward from 3.1.4",
+          "doc_id": "D07",
+          "locator": "section 3"
+        },
+        {
+          "what": "RC-06 effectiveness is 'Summative usability evaluation HFV-02 task T4' and RC-03 effectiveness is SUV-03; neither report, version or build is supplied (SUV-03 Hub v3 only)",
+          "doc_id": "D07",
+          "locator": "section 3; D10 section 6"
+        },
+        {
+          "what": "Risk-control trace in D09 marks only TC-002, -004, -005, -008, -010, -016, -021 as risk-control tests; D07 additionally cites TC-032, TC-027, TC-025, TC-036, TC-034 which D09 shows with '—'",
+          "doc_id": "D09",
+          "locator": "section 3"
+        },
+        {
+          "what": "Open anomaly ANM-105 linked to H-04 and ANM-109 (TC-035 failure, not in D13) are not addressed in the residual risk evaluation",
+          "doc_id": "D07",
+          "locator": "section 4; D13 ANM-105; D10 TR-0434"
+        },
+        {
+          "what": "Safety-related requirements SRS-017 (BLE link loss alert, 'critical'), SRS-013, SRS-023, SRS-006 are not linked to any hazard in D07",
+          "doc_id": "D04",
+          "locator": "section 2; D07 section 2"
+        },
+        {
+          "what": "Report reviewers include M. Okafor (Systems), but D07 approval header lists only S. Brandt and Dr. L. Meyer",
+          "doc_id": "D07",
+          "locator": "header; section 6"
+        },
+        {
+          "what": "Overall residual risk 'acceptable' without the method or criteria applied; benefit-risk only by Annex reference",
+          "doc_id": "D07",
+          "locator": "section 5"
+        }
+      ],
+      "contradictions": [
+        {
+          "what": "D17 section 6 says SR-06 -> HS-02 and SR-07 -> HS-07 are 'Both recorded in D07 section 2' with security origin; D07 section 2 marks HS-02 and HS-07 'Security origin: no' (only H-05 'yes')",
+          "doc_ids": [
+            "D17",
+            "D07"
+          ]
+        },
+        {
+          "what": "D07 section 4 'After controls, all hazardous situations are acceptable ... except HS-07' although HS-02 (unacceptable before controls) has no risk control listed",
+          "doc_ids": [
+            "D07"
+          ]
+        },
+        {
+          "what": "HS-07 is 'Processing overload drops samples silently' while the ALARP justification is ANM-104 'latency 2.4 s under maximum load'; RC-07 tests TC-021/TC-034 pass but TC-022 (SRS-006/013) fails with ANM-104",
+          "doc_ids": [
+            "D07",
+            "D10",
+            "D13"
+          ]
+        },
+        {
+          "what": "Disclosure list includes 'pause alert limits' but IFU section 5 discloses only latency and lead-off behaviour (excerpt)",
+          "doc_ids": [
+            "D07",
+            "D23"
+          ]
+        }
+      ]
+    },
+    {
+      "l1": "L1-05",
+      "expected_evidence": "An SRS describing the ID scheme and trace method; uniquely identified, testable, categorized requirements including safety requirements from risk controls; security requirements with acceptance criteria for each applicable control category, reviewed; and a dated, signed approval with change control after baseline.",
+      "found": [
+        {
+          "what": "ID scheme SRS-nnn / SEC-nnn; verification method per requirement; trace held in D09 and 'trace matrix export TM-3.2 (DHF)'",
+          "doc_id": "D04",
+          "locator": "section 1"
+        },
+        {
+          "what": "24 requirements SRS-001..SRS-024 with category, safety-related and critical flags, verification method and last change date",
+          "doc_id": "D04",
+          "locator": "section 2"
+        },
+        {
+          "what": "6 security requirements SEC-001..SEC-006 with derivation and review date 2026-02-11",
+          "doc_id": "D04",
+          "locator": "section 3"
+        },
+        {
+          "what": "Approval: SRS 4.2 approved 2026-02-12 by M. Okafor and S. Brandt; changes since 4.1 listed with CH ids",
+          "doc_id": "D04",
+          "locator": "section 4"
+        },
+        {
+          "what": "Requirement-to-unit mapping",
+          "doc_id": "D06",
+          "locator": "section 1"
+        },
+        {
+          "what": "Requirement-to-test mapping",
+          "doc_id": "D09",
+          "locator": "section 3"
+        }
+      ],
+      "not_found": [
+        {
+          "what": "Any test case for SRS-017 (BLE link loss > 60 s alert; 'Safety-related yes', 'Critical yes')",
+          "searched": "D09 section 3, D10 section 4, D11, D19; searched 'SRS-017'"
+        },
+        {
+          "what": "Design unit for SRS-014, SRS-017, SRS-020, SRS-021, SRS-022, SEC-002, SEC-003, SEC-005",
+          "searched": "D06 section 1, D05; searched each id"
+        },
+        {
+          "what": "Table 4 (clinically validated threshold ranges) referenced by SRS-019 and D02",
+          "searched": "all documents D01-D23; searched 'Table 4'"
+        },
+        {
+          "what": "Dedicated security requirements for BLE replay protection (SC-07), DoS/rate limiting (SC-08), role-based authorization (SC-10) and security event forwarding (SC-09); these controls map to SRS-001, SRS-024 or SEC-002/SEC-005",
+          "searched": "D04 section 3, D18 section 1, D17 section 7"
+        },
+        {
+          "what": "Measurable acceptance criteria per security requirement (e.g., SEC-004 pinning failure behaviour, SEC-005 tamper report latency)",
+          "searched": "D04 section 3"
+        },
+        {
+          "what": "Approval signature record and redline/difference view vs SRS 4.1",
+          "searched": "D04; searched 'signature', 'redline', 'difference'"
+        }
+      ],
+      "parameter_concerns": [
+        {
+          "what": "D04 section 1 says 'Requirements changed for 3.2.0 carry a change date of 2026-02-10 or later', but SRS-009, SRS-015 and SRS-024 (listed as changed under CH-31, CH-32, CH-30 in section 4) show 'Last change 2025-11-20'",
+          "doc_id": "D04",
+          "locator": "sections 1, 2, 4"
+        },
+        {
+          "what": "CH-29 (SRS-012, SRS-013) is listed as a change since SRS 4.1 for 3.2.0, but D12 places CH-29 in the 3.1.0 -> 3.1.4 step",
+          "doc_id": "D04",
+          "locator": "section 4; D12 section 2"
+        },
+        {
+          "what": "SRS-006 (display within 2 s) is not met under maximum load (ANM-104, 2.4 s) and the requirement was not revised; TC-022 failed",
+          "doc_id": "D04",
+          "locator": "SRS-006; D13 ANM-104; D10 TR-0422"
+        },
+        {
+          "what": "Security requirements SRS-020, SRS-021, SRS-022 marked 'Safety-related no' while SRS-010 is 'yes'; SC-07 (BLE replay, safety transfer to HS-02) traces to SRS-001 rather than a security requirement",
+          "doc_id": "D04",
+          "locator": "section 2; D18 section 1"
+        },
+        {
+          "what": "Mutual TLS appears in SEC-006 (listener) but SRS-009 still reads 'TLS 1.2 or higher'; D02 says 'mutual TLS from 3.2.0' for IF-02, D18 P-02 and P-04 both mutual TLS",
+          "doc_id": "D04",
+          "locator": "SRS-009, SEC-004, SEC-006; D02 section 4"
+        }
+      ],
+      "contradictions": [
+        {
+          "what": "D04 section 1 change-date rule vs D04 section 2 last-change dates for SRS-009, SRS-015, SRS-024 (2025-11-20) vs D04 section 4 change list",
+          "doc_ids": [
+            "D04"
+          ]
+        },
+        {
+          "what": "SRS-017 is safety-related and critical but has no test case in D09 and no execution in D10, while D10 claims all system test cases passed",
+          "doc_ids": [
+            "D04",
+            "D09",
+            "D10"
+          ]
+        }
+      ]
+    },
+    {
+      "l1": "L1-09",
+      "expected_evidence": "A V&V plan by level with entry/exit criteria, environments and acceptance criteria; approved protocols with steps and expected results; for Enhanced, unit and integration protocols and reports with expected/actual results; specified environments with readiness; per-run system execution records (version, configuration, date, person); documented failures, fixes, regression analysis and re-runs; system/unit/integration reports and a test summary for the candidate release; and validation in actual or simulated use.",
+      "found": [
+        {
+          "what": "V&V strategy: unit (GoogleTest), integration per interface, system per requirement on both hubs, simulated-use validation SUV-03, regression rule",
+          "doc_id": "D09",
+          "locator": "section 1"
+        },
+        {
+          "what": "Declared test window 2026-03-23 to 2026-04-08 for b1187",
+          "doc_id": "D09",
+          "locator": "section 2"
+        },
+        {
+          "what": "Test case / protocol index TC-001..TC-040 (39 entries, TC-026 absent) with protocol id/version, approval date, approver",
+          "doc_id": "D09",
+          "locator": "section 3"
+        },
+        {
+          "what": "System verification report SVR-3.2 with environments ENV-01/ENV-02, tools, 41-run execution table, failure/regression section",
+          "doc_id": "D10",
+          "locator": "sections 1-6",
+          "note": "Approved 2026-04-10 by K. Novak and 'QA: J. Doe'"
+        },
+        {
+          "what": "Unit test runs UT-01..UT-07, UT-09 and integration runs IT-01..IT-05 on 3.2.0 (b1187) with acceptance criteria",
+          "doc_id": "D11",
+          "locator": "sections 1-2"
+        },
+        {
+          "what": "Regression analysis RA-32-01 (2026-03-22) selecting full system set on b1187",
+          "doc_id": "D10",
+          "locator": "section 5"
+        },
+        {
+          "what": "Simulated-use validation SUV-03, 2026-04-07, 6 clinicians, Hub v3, 12 scenarios, report SUV-03-R1",
+          "doc_id": "D10",
+          "locator": "section 6"
+        },
+        {
+          "what": "Security testing ST-01..ST-07 on 3.2.0 (b1187), 2026-03-30 to 2026-04-06, product security team 'separate from development'",
+          "doc_id": "D19",
+          "locator": "section 1"
+        },
+        {
+          "what": "Unresolved anomaly list with dispositions",
+          "doc_id": "D13",
+          "locator": "section 2"
+        }
+      ],
+      "not_found": [
+        {
+          "what": "Entry/exit criteria per test level",
+          "searched": "all documents D01-D23; searched 'entry', 'exit', 'criteria'"
+        },
+        {
+          "what": "Test protocols with inputs, steps and expected results (only index; execution sheets 'in DHF, VV-EXEC-3.2')",
+          "searched": "all documents D01-D23; searched 'expected result', 'step', 'VV-EXEC'"
+        },
+        {
+          "what": "Unit and integration protocols and reports with expected/actual results (Enhanced); D11 is a summary table only",
+          "searched": "all documents D01-D23; searched 'unit', 'integration', 'UT-', 'IT-'"
+        },
+        {
+          "what": "Integration testing of internal unit-to-unit interfaces (U-01->U-02->U-03->U-04, IPC to U-06/U-08); D11 covers only external IF-01..IF-05",
+          "searched": "D11, D05, D06"
+        },
+        {
+          "what": "Test environment readiness/qualification records; data sets (e.g., MIT-BIH reference set) per environment",
+          "searched": "D10 section 3, D09, D11; searched 'readiness', 'qualif', 'MIT-BIH'"
+        },
+        {
+          "what": "Tester identity per system, unit and integration run",
+          "searched": "all documents D01-D23; searched 'tester', 'executed by', 'performed by'"
+        },
+        {
+          "what": "Disposition of blocked TC-040 (TR-0439) and of ANM-109 (TC-035 failure)",
+          "searched": "D10, D13; searched 'TC-040', 'ANM-109', 'blocked'"
+        },
+        {
+          "what": "Test case TC-026 (numbering gap) or explanation",
+          "searched": "D09, D10; searched 'TC-026'"
+        },
+        {
+          "what": "Regression analysis for the ANM-101 fix and evidence the fix was implemented correctly",
+          "searched": "D10 section 5, D13; searched 'RA-', 'regression'"
+        },
+        {
+          "what": "SUV-03 report, protocol, software build and Hub v2 coverage",
+          "searched": "D10 section 6, D07; searched 'SUV-03'"
+        },
+        {
+          "what": "Earlier unit-test runs from 2025-12-02 and U-04/U-09 re-runs referenced in D06 section 3",
+          "searched": "D11; searched 'U-04', 'U-09', '2025-12'"
+        }
+      ],
+      "parameter_concerns": [
+        {
+          "what": "TC-031 executed as TR-0430 on 3.1.4 (b1142) on 2026-03-02, outside the declared window and before the b1187 build (2026-03-21), carried forward although RA-32-01 'selected the full system set for re-run on b1187' and D09 requires 'full system regression on each release candidate'",
+          "doc_id": "D10",
+          "locator": "section 4 TR-0430; section 5; D09 section 1"
+        },
+        {
+          "what": "TR-0408 (TC-008, RC-04) executed 2026-03-24, before its protocol approval 2026-03-25; the same protocol TP-SYS-03 v1.1 shows approval 2026-03-12 for TC-007, TC-025, TC-028",
+          "doc_id": "D10",
+          "locator": "TR-0408; D09 section 3"
+        },
+        {
+          "what": "D09 strategy 'system tests per requirement on both hub platforms', but every system test case was run on one platform only (alternating Hub v3 / Hub v2); TC-018 failed on Hub v2 (TR-0440) and was retested on Hub v3 (TR-0441); SUV-03 on Hub v3 only",
+          "doc_id": "D10",
+          "locator": "section 4; D09 section 1"
+        },
+        {
+          "what": "Unit test table: every unit shows identical dates (2026-03-23 to 2026-03-24) and identical 'coverage 94% lines'; criterion '100% statement coverage of Class C safety functions' is stated but no per-unit Class C coverage is reported",
+          "doc_id": "D11",
+          "locator": "section 1 and footer"
+        },
+        {
+          "what": "Unit tests 2026-03-23/24 run in parallel with system tests starting 2026-03-23; integration tests 2026-03-25 to 03-27 also overlap system testing; no level-gating",
+          "doc_id": "D11",
+          "locator": "sections 1-2; D10 section 4"
+        },
+        {
+          "what": "Penetration test PT-01 was on 3.1.0 (b1098), 2025-11, by 'two engineers from the ARR software team' (not independent); no pen test on 3.2.0",
+          "doc_id": "D19",
+          "locator": "section 2"
+        },
+        {
+          "what": "Unresolved anomaly list extracted 2026-04-05 from b1180, before the end of testing (2026-04-08) and not on the tested build b1187",
+          "doc_id": "D13",
+          "locator": "section 1"
+        },
+        {
+          "what": "ANM-101 'fixed in the audit exporter configuration' and retested on b1187 after code freeze (2026-03-20) with no new build id or regression analysis",
+          "doc_id": "D10",
+          "locator": "section 5"
+        },
+        {
+          "what": "No tester names on any run; D10 approval includes 'QA: J. Doe' (placeholder-style name)",
+          "doc_id": "D10",
+          "locator": "header; section 4"
+        },
+        {
+          "what": "ANM-106 'discovered: integration test' but all D11 integration runs pass",
+          "doc_id": "D13",
+          "locator": "ANM-106; D11 section 2"
+        }
+      ],
+      "contradictions": [
+        {
+          "what": "D10 summary 'All 40 system test cases passed on build b1187' vs D09 index of 39 test cases and the D10 run table: 3 fails (TR-0422 TC-022, TR-0434 TC-035, TR-0440 TC-018), 1 blocked (TR-0439 TC-040), TC-031 run on b1142; footer 'Executed 41 runs: 37 pass, 3 fail, 1 blocked'",
+          "doc_ids": [
+            "D10",
+            "D09"
+          ]
+        },
+        {
+          "what": "D10 section 5 says 'TR-0418 (TC-018) failed ... re-run as TR-0443 (pass)'; table shows TR-0418 Pass (2026-03-25), the failure is TR-0440 (2026-03-26) and the retest is TR-0441; TR-0443 does not exist",
+          "doc_ids": [
+            "D10"
+          ]
+        },
+        {
+          "what": "ANM-101 'fixed in the audit exporter configuration' (D10 section 5) vs listed as 'Deferred anomalies: ANM-104, ANM-101' (D10 section 2) and 'deferred, workaround documented' (D13)",
+          "doc_ids": [
+            "D10",
+            "D13"
+          ]
+        },
+        {
+          "what": "ANM-101 'Audit export truncates entries > 4 kB' is attached to TC-018, which tests SRS-021/SEC-003 local store encryption, not the audit log (SRS-022/SEC-005)",
+          "doc_ids": [
+            "D10",
+            "D13",
+            "D09"
+          ]
+        },
+        {
+          "what": "D10 section 5 'TC-022 and TC-035 failures are deferred (see D13)' but ANM-109 (TC-035) is absent from D13",
+          "doc_ids": [
+            "D10",
+            "D13"
+          ]
+        },
+        {
+          "what": "D13 'Open anomalies: 5 (0 critical, 1 major, 4 minor)' vs six rows ANM-101..ANM-106 (1 major, 5 minor)",
+          "doc_ids": [
+            "D13"
+          ]
+        },
+        {
+          "what": "D10 section 5 and D12 section 5 say TC-031, TC-032 and TC-037 were run on 3.1.4 (b1142); D10 table shows only TC-031 on b1142 and TC-032 (TR-0431) and TC-037 (TR-0436) on b1187",
+          "doc_ids": [
+            "D10",
+            "D12"
+          ]
+        },
+        {
+          "what": "D10 'No deviations from plan' vs execution before protocol approval (TR-0408), single-platform runs, and carry-forward of a run from b1142",
+          "doc_ids": [
+            "D10",
+            "D09"
+          ]
+        },
+        {
+          "what": "D19 PT-01 'Result: 3 findings (0 critical, 1 high, 2 medium)' vs findings table with two rows (PF-01 high, PF-02 medium)",
+          "doc_ids": [
+            "D19"
+          ]
+        },
+        {
+          "what": "D10 'All ... passed' and SRS-017 (safety-critical) has no test case at all",
+          "doc_ids": [
+            "D10",
+            "D04",
+            "D09"
+          ]
+        }
+      ]
+    }
+  ],
+  "unexpected_material": [
+    {
+      "doc_id": "D20",
+      "what": "Vulnerability assessment on SBOM of build b1150 lists OpenSSL 1.1.1w (CVE-2024-2511), a component not in the SBOM or CI list",
+      "why_it_matters": "Either an unlisted OpenSSL 1.x is present in the release (configuration list incomplete) or the scan target is not the release; KEV statement 'not present in the release' rests on a non-release build"
+    },
+    {
+      "doc_id": "D15",
+      "what": "SBOM end-of-support dates: Qt 6.5.3 2026-05-26, glibc 2026-06-30, OpenSSL 3.0 2026-09-07, all within months of submission (2026-05-04); device support to 2032-12-31",
+      "why_it_matters": "Support horizon of SOUP in the configuration baseline is shorter than the stated device support period; D20 notes migration plans only for OpenSSL and Qt"
+    },
+    {
+      "doc_id": "D19",
+      "what": "Penetration test by the development team on 3.1.0, no retest, findings 'verified closed by code review'; new inbound listener (CH-31, TCP 8443) covered only by threat-mitigation test ST-05",
+      "why_it_matters": "Independence and build of the only penetration test do not match the proposed release; affects the D22 DoC limitation 'as verified in D10 and D19'"
+    },
+    {
+      "doc_id": "D22",
+      "what": "DoC-3 cites 'ANSI/UL 2900-1, Second Edition (2023)' with recognition 13-96; DoCs dated 2026-04-20 state conformity activities completed by 2026-04-12",
+      "why_it_matters": "Edition/recognition pairing should be checked against the FDA database; the DoC rests on testing with open contradictions (D10, D19)"
+    },
+    {
+      "doc_id": "D18",
+      "what": "SC-09 (security event forwarding) has no verification test ('—')",
+      "why_it_matters": "Security control without test evidence; relevant to SEC-005 coverage in the SRS bin"
+    },
+    {
+      "doc_id": "D06",
+      "what": "SDS states unit testing started 2025-12-02 and U-04/U-09 unit tests were re-run after SDS 2.1 (2026-02-25), but D11 reports only one run per unit on 2026-03-23/24",
+      "why_it_matters": "Unit-level history and the re-runs cited as evidence of design-change verification are not supplied"
+    }
+  ]
+}

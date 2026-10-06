@@ -1,0 +1,186 @@
+[
+ {
+  "doc_id": "D01",
+  "filename": "D01-Module-Cover.md",
+  "title": "Software Module Cover Letter and Contents",
+  "chars": 3449,
+  "method": "text",
+  "readable": true
+ },
+ {
+  "doc_id": "D02",
+  "filename": "D02-Software-Description.md",
+  "title": "Software Description",
+  "chars": 1877,
+  "method": "text",
+  "readable": true
+ },
+ {
+  "doc_id": "D03",
+  "filename": "D03-Version-Configuration.md",
+  "title": "Software Version and Configuration Identification",
+  "chars": 2385,
+  "method": "text",
+  "readable": true
+ },
+ {
+  "doc_id": "D04",
+  "filename": "D04-SRS.md",
+  "title": "Software Requirements Specification",
+  "chars": 5549,
+  "method": "text",
+  "readable": true
+ },
+ {
+  "doc_id": "D05",
+  "filename": "D05-Architecture.md",
+  "title": "System and Software Architecture",
+  "chars": 1427,
+  "method": "text",
+  "readable": true
+ },
+ {
+  "doc_id": "D06",
+  "filename": "D06-SDS.md",
+  "title": "Software Design Specification",
+  "chars": 1257,
+  "method": "text",
+  "readable": true
+ },
+ {
+  "doc_id": "D07",
+  "filename": "D07-Risk-File.md",
+  "title": "Software Risk Management File and Report",
+  "chars": 3900,
+  "method": "text",
+  "readable": true
+ },
+ {
+  "doc_id": "D08",
+  "filename": "D08-Lifecycle-Plans.md",
+  "title": "Software Development, Configuration Management and Maintenance Plan Summary",
+  "chars": 1332,
+  "method": "text",
+  "readable": true
+ },
+ {
+  "doc_id": "D09",
+  "filename": "D09-VV-Plan-Protocols.md",
+  "title": "Verification and Validation Plan and Protocol Index",
+  "chars": 4094,
+  "method": "text",
+  "readable": true
+ },
+ {
+  "doc_id": "D10",
+  "filename": "D10-System-Verification-Report.md",
+  "title": "System Verification Report SVR-3.2",
+  "chars": 9031,
+  "method": "text",
+  "readable": true
+ },
+ {
+  "doc_id": "D11",
+  "filename": "D11-Unit-Integration-Summary.md",
+  "title": "Unit and Integration Test Summary",
+  "chars": 2195,
+  "method": "text",
+  "readable": true
+ },
+ {
+  "doc_id": "D12",
+  "filename": "D12-Version-History.md",
+  "title": "Software Version History",
+  "chars": 1905,
+  "method": "text",
+  "readable": true
+ },
+ {
+  "doc_id": "D13",
+  "filename": "D13-Unresolved-Anomalies.md",
+  "title": "Unresolved Software Anomalies",
+  "chars": 1746,
+  "method": "text",
+  "readable": true
+ },
+ {
+  "doc_id": "D14",
+  "filename": "D14-SOUP-OTS.md",
+  "title": "SOUP and Off-the-Shelf Software List and Anomaly Review",
+  "chars": 2644,
+  "method": "text",
+  "readable": true
+ },
+ {
+  "doc_id": "D15",
+  "filename": "D15-SBOM.md",
+  "title": "Software Bill of Materials",
+  "chars": 2394,
+  "method": "text",
+  "readable": true
+ },
+ {
+  "doc_id": "D16",
+  "filename": "D16-Threat-Model.md",
+  "title": "Threat Model",
+  "chars": 1919,
+  "method": "text",
+  "readable": true
+ },
+ {
+  "doc_id": "D17",
+  "filename": "D17-Security-Risk-Assessment.md",
+  "title": "Cybersecurity Risk Assessment and Report",
+  "chars": 2742,
+  "method": "text",
+  "readable": true
+ },
+ {
+  "doc_id": "D18",
+  "filename": "D18-Security-Architecture.md",
+  "title": "Security Architecture: Controls and Views",
+  "chars": 2208,
+  "method": "text",
+  "readable": true
+ },
+ {
+  "doc_id": "D19",
+  "filename": "D19-Security-Testing.md",
+  "title": "Cybersecurity Testing Report",
+  "chars": 2980,
+  "method": "text",
+  "readable": true
+ },
+ {
+  "doc_id": "D20",
+  "filename": "D20-Vulnerability-Assessment.md",
+  "title": "Vulnerability Assessment",
+  "chars": 1382,
+  "method": "text",
+  "readable": true
+ },
+ {
+  "doc_id": "D21",
+  "filename": "D21-Cyber-Management-Plan.md",
+  "title": "Cybersecurity Management Plan (Postmarket)",
+  "chars": 1123,
+  "method": "text",
+  "readable": true
+ },
+ {
+  "doc_id": "D22",
+  "filename": "D22-Declarations.md",
+  "title": "Declarations of Conformity to Recognized Standards",
+  "chars": 1798,
+  "method": "text",
+  "readable": true
+ },
+ {
+  "doc_id": "D23",
+  "filename": "D23-Labeling-Excerpt.md",
+  "title": "Instructions for Use: Software and Cybersecurity Sections (excerpt)",
+  "chars": 1608,
+  "method": "text",
+  "readable": true
+ }
+]

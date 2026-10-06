@@ -1,0 +1,675 @@
+{
+ "planted": 23,
+ "detected": 23,
+ "recall": 1.0,
+ "matched": [
+  {
+   "id": "PD-01",
+   "title": "SRS-017 (safety-critical BLE link-loss alert) has no test case",
+   "detect_by": [
+    "CC-01"
+   ],
+   "match_any": [
+    "SRS-017"
+   ],
+   "severity": "S3",
+   "docs": [
+    "D04",
+    "D09"
+   ],
+   "findings": [
+    "F-0029"
+   ]
+  },
+  {
+   "id": "PD-02",
+   "title": "TC-031/TC-032/TC-037 (SRS-012/013) passed only on superseded build b1142; carried forward by narrative with no L2-10.04 bridge",
+   "detect_by": [
+    "CC-01"
+   ],
+   "match_any": [
+    "TC-031",
+    "TC-032",
+    "TC-037",
+    "SRS-012",
+    "SRS-013"
+   ],
+   "severity": "S3",
+   "docs": [
+    "D10",
+    "D12"
+   ],
+   "findings": [
+    "F-0028"
+   ]
+  },
+  {
+   "id": "PD-08c",
+   "title": "Anomaly list extracted 2026-04-05, before the last test run ended 2026-04-06",
+   "detect_by": [
+    "CC-06"
+   ],
+   "match_any": [
+    "extracted"
+   ],
+   "severity": "S2",
+   "docs": [
+    "D13",
+    "D10"
+   ],
+   "findings": [
+    "F-0044"
+   ]
+  },
+  {
+   "id": "PD-03",
+   "title": "Penetration test on v3.1.0 build b1098 (Nov 2025), not on the release build; no retest",
+   "detect_by": [
+    "CC-04",
+    "CC-12"
+   ],
+   "match_any": [
+    "PT-01",
+    "b1098"
+   ],
+   "severity": "S3",
+   "docs": [
+    "D19"
+   ],
+   "findings": [
+    "F-0037"
+   ]
+  },
+  {
+   "id": "PD-03b",
+   "title": "Penetration tester is the internal development team; independence not shown",
+   "detect_by": [
+    "CC-23"
+   ],
+   "match_any": [
+    "PT-01"
+   ],
+   "severity": "S2",
+   "docs": [
+    "D19"
+   ],
+   "findings": [
+    "F-0061"
+   ]
+  },
+  {
+   "id": "PD-04a",
+   "title": "SBOM generated 2026-03-18, before code freeze 2026-03-20",
+   "detect_by": [
+    "CC-12"
+   ],
+   "match_any": [
+    "sbom"
+   ],
+   "severity": "S3",
+   "docs": [
+    "D15"
+   ],
+   "findings": [
+    "F-0056"
+   ]
+  },
+  {
+   "id": "PD-04b",
+   "title": "SBOM describes build b1150, release build is b1187",
+   "detect_by": [
+    "CC-05",
+    "rule"
+   ],
+   "match_any": [
+    "b1150"
+   ],
+   "severity": "S3",
+   "docs": [
+    "D15"
+   ],
+   "findings": [
+    "F-0027",
+    "F-0040",
+    "F-0041"
+   ]
+  },
+  {
+   "id": "PD-05",
+   "title": "libdsp version 4.1.2 in SOUP list and config items vs 4.1.0 in SBOM",
+   "detect_by": [
+    "CC-03",
+    "CC-11"
+   ],
+   "match_any": [
+    "libdsp",
+    "SOUP-01"
+   ],
+   "severity": "S3",
+   "docs": [
+    "D14",
+    "D15"
+   ],
+   "findings": [
+    "F-0033",
+    "F-0054"
+   ]
+  },
+  {
+   "id": "PD-06a",
+   "title": "zlib-ng anomaly review covers 2.1.3, SOUP in use is 2.1.6",
+   "detect_by": [
+    "CC-03"
+   ],
+   "match_any": [
+    "zlib",
+    "SOUP-02"
+   ],
+   "severity": "S3",
+   "docs": [
+    "D14"
+   ],
+   "findings": [
+    "F-0034"
+   ]
+  },
+  {
+   "id": "PD-06b",
+   "title": "zlib-ng anomaly review dated 2025-10-02 precedes adoption 2026-01-10",
+   "detect_by": [
+    "CC-12"
+   ],
+   "match_any": [
+    "zlib",
+    "SOUP-02"
+   ],
+   "severity": "S2",
+   "docs": [
+    "D14"
+   ],
+   "findings": [
+    "F-0035"
+   ]
+  },
+  {
+   "id": "PD-07",
+   "title": "RC-07 (load shedding) has no effectiveness verification evidence",
+   "detect_by": [
+    "CC-02"
+   ],
+   "match_any": [
+    "RC-07"
+   ],
+   "severity": "S3",
+   "docs": [
+    "D07"
+   ],
+   "findings": [
+    "F-0030"
+   ]
+  },
+  {
+   "id": "PD-08a",
+   "title": "Unresolved anomaly list describes build b1180, not release build b1187",
+   "detect_by": [
+    "CC-06",
+    "CC-05",
+    "anchor"
+   ],
+   "match_any": [
+    "b1180"
+   ],
+   "severity": "S3",
+   "docs": [
+    "D13"
+   ],
+   "findings": [
+    "F-0038",
+    "F-0042",
+    "F-0043"
+   ]
+  },
+  {
+   "id": "PD-08b",
+   "title": "Anomaly list states 5 open; 6 records listed",
+   "detect_by": [
+    "CC-22"
+   ],
+   "match_any": [
+    "anomal"
+   ],
+   "severity": "S2",
+   "docs": [
+    "D13"
+   ],
+   "findings": [
+    "F-0045"
+   ]
+  },
+  {
+   "id": "PD-09",
+   "title": "DoC-3 cites UL 2900-1 Second Edition under 13-96; recognized edition is the First Edition 2017",
+   "detect_by": [
+    "CC-07"
+   ],
+   "match_any": [
+    "DoC-3",
+    "2900"
+   ],
+   "severity": "S3",
+   "docs": [
+    "D22"
+   ],
+   "findings": [
+    "F-0047"
+   ]
+  },
+  {
+   "id": "PD-10a",
+   "title": "SVR summary says all 40 system tests passed; records show 2 fail and 1 blocked",
+   "detect_by": [
+    "CC-22"
+   ],
+   "match_any": [
+    "SVR",
+    "passed"
+   ],
+   "severity": "S2",
+   "docs": [
+    "D10"
+   ],
+   "findings": [
+    "F-0059"
+   ]
+  },
+  {
+   "id": "PD-10b",
+   "title": "Pen test states 3 findings; 2 finding records",
+   "detect_by": [
+    "CC-22"
+   ],
+   "match_any": [
+    "PT-01"
+   ],
+   "severity": "S2",
+   "docs": [
+    "D19"
+   ],
+   "findings": [
+    "F-0060"
+   ]
+  },
+  {
+   "id": "PD-11",
+   "title": "Threat model dated 2026-01-30 predates security-relevant change CH-31 (inbound sync listener) in 3.2.0",
+   "detect_by": [
+    "CC-12"
+   ],
+   "match_any": [
+    "CH-31",
+    "threat model"
+   ],
+   "severity": "S2",
+   "docs": [
+    "D16",
+    "D12"
+   ],
+   "findings": [
+    "F-0057"
+   ]
+  },
+  {
+   "id": "PD-12",
+   "title": "CVE-2024-2511 assessed against OpenSSL 1.1.1w, a component not in the SBOM",
+   "detect_by": [
+    "CC-13"
+   ],
+   "match_any": [
+    "CVE-2024-2511",
+    "1.1.1w"
+   ],
+   "severity": "S3",
+   "docs": [
+    "D20",
+    "D15"
+   ],
+   "findings": [
+    "F-0058"
+   ]
+  },
+  {
+   "id": "PD-13",
+   "title": "TC-008 run executed 2026-03-24, protocol TP-SYS-03 approved 2026-03-25",
+   "detect_by": [
+    "CC-12"
+   ],
+   "match_any": [
+    "TC-008"
+   ],
+   "severity": "S2",
+   "docs": [
+    "D09",
+    "D10"
+   ],
+   "findings": [
+    "F-0055"
+   ]
+  },
+  {
+   "id": "PD-14",
+   "title": "IFU states software version 3.2.1; proposed is 3.2.0",
+   "detect_by": [
+    "CC-05",
+    "anchor"
+   ],
+   "match_any": [
+    "3.2.1"
+   ],
+   "severity": "S3",
+   "docs": [
+    "D23"
+   ],
+   "findings": [
+    "F-0039"
+   ]
+  },
+  {
+   "id": "PD-15",
+   "title": "TC-035 failed raising ANM-109, which is not on the unresolved anomaly list and has no retest",
+   "detect_by": [
+    "CC-06"
+   ],
+   "match_any": [
+    "ANM-109"
+   ],
+   "severity": "S3",
+   "docs": [
+    "D10",
+    "D13"
+   ],
+   "findings": [
+    "F-0046"
+   ]
+  },
+  {
+   "id": "PD-16",
+   "title": "Security control SC-09 (event forwarding) has no verification test",
+   "detect_by": [
+    "CC-04"
+   ],
+   "match_any": [
+    "SC-09"
+   ],
+   "severity": "S3",
+   "docs": [
+    "D18"
+   ],
+   "findings": [
+    "F-0036"
+   ]
+  },
+  {
+   "id": "PD-17",
+   "title": "Hazard H-08 / HS-08 has no risk control traced (acceptability argued in an annex)",
+   "detect_by": [
+    "CC-02"
+   ],
+   "match_any": [
+    "H-08",
+    "HS-08"
+   ],
+   "severity": "S2",
+   "docs": [
+    "D07"
+   ],
+   "findings": [
+    "F-0032"
+   ]
+  }
+ ],
+ "missed": [],
+ "unplanted_kept": {
+  "total": 5,
+  "detected": 2,
+  "items": [
+   {
+    "id": "UK-01",
+    "title": "CH-29 and CH-30 marked not safety-relevant although they change safety-related requirements",
+    "detect_by": [
+     "independent"
+    ],
+    "match_any": [
+     "CH-29",
+     "CH-30"
+    ],
+    "findings": []
+   },
+   {
+    "id": "UK-02",
+    "title": "SRS change dates (2025-11-20) do not match the changes the SRS says they received",
+    "detect_by": [
+     "independent"
+    ],
+    "match_any": [
+     "2025-11-20",
+     "change date"
+    ],
+    "findings": []
+   },
+   {
+    "id": "UK-03",
+    "title": "SR-06/SR-07 transferred with security origin per D17; hazard table says security origin no",
+    "detect_by": [
+     "independent"
+    ],
+    "match_any": [
+     "security origin",
+     "SR-06",
+     "SR-07"
+    ],
+    "findings": []
+   },
+   {
+    "id": "UK-04",
+    "title": "H-02 unacceptable before controls has no risk control",
+    "detect_by": [
+     "CC-02",
+     "independent"
+    ],
+    "match_any": [
+     "H-02",
+     "HS-02"
+    ],
+    "findings": [
+     "F-0031"
+    ]
+   },
+   {
+    "id": "UK-05",
+    "title": "SOUP list covers 6 of 13 third-party SBOM components; seven have no anomaly-list review",
+    "detect_by": [
+     "CC-03",
+     "CC-11",
+     "independent"
+    ],
+    "match_any": [
+     "bluez",
+     "libcurl",
+     "curl",
+     "protobuf",
+     "glibc",
+     "busybox",
+     "mbedtls"
+    ],
+    "findings": [
+     "F-0048",
+     "F-0049",
+     "F-0050",
+     "F-0051",
+     "F-0052",
+     "F-0053"
+    ]
+   }
+  ]
+ },
+ "unmatched_breaks": [
+  {
+   "id": "F-0001",
+   "ref": "L2-01.01",
+   "severity": "S1",
+   "message": "L2-01.01: submission-scope parameters not stated for some entities: risk_assessed_before_controls (1/1), cybersecurity_compromise_considered (1/1), referenced_documents (1/1)"
+  },
+  {
+   "id": "F-0002",
+   "ref": "L2-04.05",
+   "severity": "S1",
+   "message": "L2-04.05: submission-scope parameters not stated for some entities: new_risks_from_control_assessed (7/7), effectiveness_verification_ref (1/7)"
+  },
+  {
+   "id": "F-0003",
+   "ref": "L2-04.08",
+   "severity": "S1",
+   "message": "L2-04.08: submission-scope parameters not stated for some entities: post_production_methods_ref (1/1)"
+  },
+  {
+   "id": "F-0004",
+   "ref": "L2-05.02",
+   "severity": "S1",
+   "message": "L2-05.02: submission-scope parameters not stated for some entities: verifying_test_ids (24/24)"
+  },
+  {
+   "id": "F-0005",
+   "ref": "L2-09.02",
+   "severity": "S1",
+   "message": "L2-09.02: submission-scope parameters not stated for some entities: expected_result (39/39), pass_fail_criterion (39/39)"
+  },
+  {
+   "id": "F-0006",
+   "ref": "L2-09.03",
+   "severity": "S1",
+   "message": "L2-09.03: submission-scope parameters not stated for some entities: hardware_os_platform_config (8/8), ots_soup_versions_in_test_config (8/8), expected_result_ref (8/8), actual_result_recorded (8/8)"
+  },
+  {
+   "id": "F-0007",
+   "ref": "L2-09.05",
+   "severity": "S1",
+   "message": "L2-09.05: submission-scope parameters not stated for some entities: expected_result_ref (41/41)"
+  },
+  {
+   "id": "F-0008",
+   "ref": "L2-09.06",
+   "severity": "S1",
+   "message": "L2-09.06: submission-scope parameters not stated for some entities: change_id (1/1), fixed_in_version (1/1), regression_run_ids (1/1)"
+  },
+  {
+   "id": "F-0009",
+   "ref": "L2-09.08",
+   "severity": "S1",
+   "message": "L2-09.08: submission-scope parameters not stated for some entities: protocol_level_pass_fail_table (1/1)"
+  },
+  {
+   "id": "F-0010",
+   "ref": "L2-10.04",
+   "severity": "S1",
+   "message": "L2-10.04: submission-scope parameters not stated for some entities: differences_listed (1/1)"
+  },
+  {
+   "id": "F-0011",
+   "ref": "L2-11.01",
+   "severity": "S1",
+   "message": "L2-11.01: submission-scope parameters not stated for some entities: disposition_date (6/6), risk_file_link (4/6)"
+  },
+  {
+   "id": "F-0012",
+   "ref": "L2-12.04",
+   "severity": "S1",
+   "message": "L2-12.04: submission-scope parameters not stated for some entities: hazard_relevant_anomalies (4/6)"
+  },
+  {
+   "id": "F-0013",
+   "ref": "L2-12.05",
+   "severity": "S1",
+   "message": "L2-12.05: submission-scope parameters not stated for some entities: residual_risk_ref (2/2)"
+  },
+  {
+   "id": "F-0014",
+   "ref": "L2-13.02",
+   "severity": "S1",
+   "message": "L2-13.02: submission-scope parameters not stated for some entities: version_history_entries (1/1), author_and_approvers (1/1)"
+  },
+  {
+   "id": "F-0015",
+   "ref": "L2-14.01",
+   "severity": "S1",
+   "message": "L2-14.01: submission-scope parameters not stated for some entities: methodology_rationale (1/1)"
+  },
+  {
+   "id": "F-0016",
+   "ref": "L2-15.02",
+   "severity": "S1",
+   "message": "L2-15.02: submission-scope parameters not stated for some entities: affected_components_and_versions (4/4)"
+  },
+  {
+   "id": "F-0017",
+   "ref": "L2-15.05",
+   "severity": "S1",
+   "message": "L2-15.05: submission-scope parameters not stated for some entities: transfer_method (2/2)"
+  },
+  {
+   "id": "F-0018",
+   "ref": "L2-16.01",
+   "severity": "S1",
+   "message": "L2-16.01: submission-scope parameters not stated for some entities: covers_all_system_elements (1/1)"
+  },
+  {
+   "id": "F-0019",
+   "ref": "L2-16.02",
+   "severity": "S1",
+   "message": "L2-16.02: submission-scope parameters not stated for some entities: sbom_author (14/14), sbom_entry_timestamp (14/14), end_of_support_date (7/14)"
+  },
+  {
+   "id": "F-0020",
+   "ref": "L2-17.02",
+   "severity": "S1",
+   "message": "L2-17.02: submission-scope parameters not stated for some entities: device_and_system_impact (3/3), controls_or_compensating_controls (3/3)"
+  },
+  {
+   "id": "F-0021",
+   "ref": "L2-17.04",
+   "severity": "S1",
+   "message": "L2-17.04: submission-scope parameters not stated for some entities: kev_vulnerability_ids_present_in_release (1/1)"
+  },
+  {
+   "id": "F-0022",
+   "ref": "L2-21.01",
+   "severity": "S1",
+   "message": "L2-21.01: submission-scope parameters not stated for some entities: applies_to_assets_interfaces (10/10), entities_authenticated (10/10), mechanism_algorithm_version (10/10), credential_lifecycle (10/"
+  },
+  {
+   "id": "F-0023",
+   "ref": "L2-23.01",
+   "severity": "S1",
+   "message": "L2-23.01: submission-scope parameters not stated for some entities: tools_versions_settings (4/4), findings_ids (4/4), boundary_assumptions_rationale (4/4)"
+  },
+  {
+   "id": "F-0024",
+   "ref": "L2-23.02",
+   "severity": "S1",
+   "message": "L2-23.02: submission-scope parameters not stated for some entities: tools_versions_settings (2/2), findings_ids (2/2), view_ids_covered (2/2), thwart_attempt_performed (2/2)"
+  },
+  {
+   "id": "F-0025",
+   "ref": "L2-23.03",
+   "severity": "S1",
+   "message": "L2-23.03: submission-scope parameters not stated for some entities: tools_versions_settings (1/1), findings_ids (1/1), job_type (1/1)"
+  },
+  {
+   "id": "F-0026",
+   "ref": "L2-23.04",
+   "severity": "S1",
+   "message": "L2-23.04: submission-scope parameters not stated for some entities: tester_expertise_evidence (1/1)"
+  }
+ ],
+ "unmatched_candidates": 0,
+ "false_positive_checks": []
+}

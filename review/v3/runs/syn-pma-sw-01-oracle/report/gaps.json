@@ -1,0 +1,1353 @@
+[
+ {
+  "id": "F-0001",
+  "kind": "param",
+  "ref": "L2-01.01",
+  "severity": "S1",
+  "status": "break",
+  "message": "L2-01.01: submission-scope parameters not stated for some entities: risk_assessed_before_controls (1/1), cybersecurity_compromise_considered (1/1), referenced_documents (1/1)",
+  "l2": [
+   "L2-01.01"
+  ],
+  "l1": [
+   "L1-01"
+  ],
+  "evidence": [
+   {
+    "entity": "document:doc-level",
+    "doc_id": "D03",
+    "quote": "Documentation Level"
+   }
+  ]
+ },
+ {
+  "id": "F-0002",
+  "kind": "param",
+  "ref": "L2-04.05",
+  "severity": "S1",
+  "status": "break",
+  "message": "L2-04.05: submission-scope parameters not stated for some entities: new_risks_from_control_assessed (7/7), effectiveness_verification_ref (1/7)",
+  "l2": [
+   "L2-04.05"
+  ],
+  "l1": [
+   "L1-04"
+  ],
+  "evidence": [
+   {
+    "entity": "risk_control:RC-01",
+    "doc_id": "D07",
+    "quote": "| RC-01 |"
+   }
+  ]
+ },
+ {
+  "id": "F-0003",
+  "kind": "param",
+  "ref": "L2-04.08",
+  "severity": "S1",
+  "status": "break",
+  "message": "L2-04.08: submission-scope parameters not stated for some entities: post_production_methods_ref (1/1)",
+  "l2": [
+   "L2-04.08"
+  ],
+  "l1": [
+   "L1-04"
+  ],
+  "evidence": [
+   {
+    "entity": "document:RMR-ARR-3.2",
+    "doc_id": "D07",
+    "quote": "RMR-ARR-3.2 Rev 3.1 dated **2026-04-12**"
+   }
+  ]
+ },
+ {
+  "id": "F-0004",
+  "kind": "param",
+  "ref": "L2-05.02",
+  "severity": "S1",
+  "status": "break",
+  "message": "L2-05.02: submission-scope parameters not stated for some entities: verifying_test_ids (24/24)",
+  "l2": [
+   "L2-05.02"
+  ],
+  "l1": [
+   "L1-05"
+  ],
+  "evidence": [
+   {
+    "entity": "requirement:SRS-001",
+    "doc_id": "D04",
+    "quote": "| SRS-001 |"
+   }
+  ]
+ },
+ {
+  "id": "F-0005",
+  "kind": "param",
+  "ref": "L2-09.02",
+  "severity": "S1",
+  "status": "break",
+  "message": "L2-09.02: submission-scope parameters not stated for some entities: expected_result (39/39), pass_fail_criterion (39/39)",
+  "l2": [
+   "L2-09.02"
+  ],
+  "l1": [
+   "L1-09"
+  ],
+  "evidence": [
+   {
+    "entity": "test_case:TC-001",
+    "doc_id": "D09",
+    "quote": "| TC-001 |"
+   }
+  ]
+ },
+ {
+  "id": "F-0006",
+  "kind": "param",
+  "ref": "L2-09.03",
+  "severity": "S1",
+  "status": "break",
+  "message": "L2-09.03: submission-scope parameters not stated for some entities: hardware_os_platform_config (8/8), ots_soup_versions_in_test_config (8/8), expected_result_ref (8/8), actual_result_recorded (8/8)",
+  "l2": [
+   "L2-09.03"
+  ],
+  "l1": [
+   "L1-09"
+  ],
+  "evidence": [
+   {
+    "entity": "test_run:UT-01",
+    "doc_id": "D11",
+    "quote": "| UT-01 |"
+   }
+  ]
+ },
+ {
+  "id": "F-0007",
+  "kind": "param",
+  "ref": "L2-09.05",
+  "severity": "S1",
+  "status": "break",
+  "message": "L2-09.05: submission-scope parameters not stated for some entities: expected_result_ref (41/41)",
+  "l2": [
+   "L2-09.05"
+  ],
+  "l1": [
+   "L1-09"
+  ],
+  "evidence": [
+   {
+    "entity": "test_run:TR-0401",
+    "doc_id": "D10",
+    "quote": "| TR-0401 |"
+   }
+  ]
+ },
+ {
+  "id": "F-0008",
+  "kind": "param",
+  "ref": "L2-09.06",
+  "severity": "S1",
+  "status": "break",
+  "message": "L2-09.06: submission-scope parameters not stated for some entities: change_id (1/1), fixed_in_version (1/1), regression_run_ids (1/1)",
+  "l2": [
+   "L2-09.06"
+  ],
+  "l1": [
+   "L1-09"
+  ],
+  "evidence": [
+   {
+    "entity": "document:RA-32-01",
+    "doc_id": "D10",
+    "quote": "Regression analysis RA-32-01"
+   }
+  ]
+ },
+ {
+  "id": "F-0009",
+  "kind": "param",
+  "ref": "L2-09.08",
+  "severity": "S1",
+  "status": "break",
+  "message": "L2-09.08: submission-scope parameters not stated for some entities: protocol_level_pass_fail_table (1/1)",
+  "l2": [
+   "L2-09.08"
+  ],
+  "l1": [
+   "L1-09"
+  ],
+  "evidence": [
+   {
+    "entity": "test_report:SVR-3.2-summary",
+    "doc_id": "D10",
+    "quote": "within the declared test window"
+   }
+  ]
+ },
+ {
+  "id": "F-0010",
+  "kind": "param",
+  "ref": "L2-10.04",
+  "severity": "S1",
+  "status": "break",
+  "message": "L2-10.04: submission-scope parameters not stated for some entities: differences_listed (1/1)",
+  "l2": [
+   "L2-10.04"
+  ],
+  "l1": [
+   "L1-10"
+  ],
+  "evidence": [
+   {
+    "entity": "software_version:final-entry",
+    "doc_id": "D12",
+    "quote": "No differences."
+   }
+  ]
+ },
+ {
+  "id": "F-0011",
+  "kind": "param",
+  "ref": "L2-11.01",
+  "severity": "S1",
+  "status": "break",
+  "message": "L2-11.01: submission-scope parameters not stated for some entities: disposition_date (6/6), risk_file_link (4/6)",
+  "l2": [
+   "L2-11.01"
+  ],
+  "l1": [
+   "L1-11"
+  ],
+  "evidence": [
+   {
+    "entity": "anomaly:ANM-101",
+    "doc_id": "D13",
+    "quote": "| ANM-101 |"
+   }
+  ]
+ },
+ {
+  "id": "F-0012",
+  "kind": "param",
+  "ref": "L2-12.04",
+  "severity": "S1",
+  "status": "break",
+  "message": "L2-12.04: submission-scope parameters not stated for some entities: hazard_relevant_anomalies (4/6)",
+  "l2": [
+   "L2-12.04"
+  ],
+  "l1": [
+   "L1-12"
+  ],
+  "evidence": [
+   {
+    "entity": "soup_component:SOUP-01",
+    "doc_id": "D14",
+    "quote": "| SOUP-01 |"
+   }
+  ]
+ },
+ {
+  "id": "F-0013",
+  "kind": "param",
+  "ref": "L2-12.05",
+  "severity": "S1",
+  "status": "break",
+  "message": "L2-12.05: submission-scope parameters not stated for some entities: residual_risk_ref (2/2)",
+  "l2": [
+   "L2-12.05"
+  ],
+  "l1": [
+   "L1-12"
+  ],
+  "evidence": [
+   {
+    "entity": "soup_component:SOUP-01",
+    "doc_id": "D14",
+    "quote": "| SOUP-01 |"
+   }
+  ]
+ },
+ {
+  "id": "F-0014",
+  "kind": "param",
+  "ref": "L2-13.02",
+  "severity": "S1",
+  "status": "break",
+  "message": "L2-13.02: submission-scope parameters not stated for some entities: version_history_entries (1/1), author_and_approvers (1/1)",
+  "l2": [
+   "L2-13.02"
+  ],
+  "l1": [
+   "L1-13"
+  ],
+  "evidence": [
+   {
+    "entity": "document:SRMR-ARR-3.2",
+    "doc_id": "D17",
+    "quote": "SRMR-ARR-3.2 Rev 2.0 dated **2026-04-09**"
+   }
+  ]
+ },
+ {
+  "id": "F-0015",
+  "kind": "param",
+  "ref": "L2-14.01",
+  "severity": "S1",
+  "status": "break",
+  "message": "L2-14.01: submission-scope parameters not stated for some entities: methodology_rationale (1/1)",
+  "l2": [
+   "L2-14.01"
+  ],
+  "l1": [
+   "L1-14"
+  ],
+  "evidence": [
+   {
+    "entity": "document:TM-ARR-2.1",
+    "doc_id": "D16",
+    "quote": "TM-ARR Rev 2.1 dated **2026-01-30**"
+   }
+  ]
+ },
+ {
+  "id": "F-0016",
+  "kind": "param",
+  "ref": "L2-15.02",
+  "severity": "S1",
+  "status": "break",
+  "message": "L2-15.02: submission-scope parameters not stated for some entities: affected_components_and_versions (4/4)",
+  "l2": [
+   "L2-15.02"
+  ],
+  "l1": [
+   "L1-15"
+  ],
+  "evidence": [
+   {
+    "entity": "vulnerability:SR-01",
+    "doc_id": "D17",
+    "quote": "| SR-01 |"
+   }
+  ]
+ },
+ {
+  "id": "F-0017",
+  "kind": "param",
+  "ref": "L2-15.05",
+  "severity": "S1",
+  "status": "break",
+  "message": "L2-15.05: submission-scope parameters not stated for some entities: transfer_method (2/2)",
+  "l2": [
+   "L2-15.05"
+  ],
+  "l1": [
+   "L1-15"
+  ],
+  "evidence": [
+   {
+    "entity": "vulnerability:SR-06",
+    "doc_id": "D17",
+    "quote": "| SR-06 |"
+   }
+  ]
+ },
+ {
+  "id": "F-0018",
+  "kind": "param",
+  "ref": "L2-16.01",
+  "severity": "S1",
+  "status": "break",
+  "message": "L2-16.01: submission-scope parameters not stated for some entities: covers_all_system_elements (1/1)",
+  "l2": [
+   "L2-16.01"
+  ],
+  "l1": [
+   "L1-16"
+  ],
+  "evidence": [
+   {
+    "entity": "document:SBOM-3.2.0",
+    "doc_id": "D15",
+    "quote": "Generated **2026-03-18**"
+   }
+  ]
+ },
+ {
+  "id": "F-0019",
+  "kind": "param",
+  "ref": "L2-16.02",
+  "severity": "S1",
+  "status": "break",
+  "message": "L2-16.02: submission-scope parameters not stated for some entities: sbom_author (14/14), sbom_entry_timestamp (14/14), end_of_support_date (7/14)",
+  "l2": [
+   "L2-16.02"
+  ],
+  "l1": [
+   "L1-16"
+  ],
+  "evidence": [
+   {
+    "entity": "soup_component:SOUP-01",
+    "doc_id": "D14",
+    "quote": "| SOUP-01 |"
+   }
+  ]
+ },
+ {
+  "id": "F-0020",
+  "kind": "param",
+  "ref": "L2-17.02",
+  "severity": "S1",
+  "status": "break",
+  "message": "L2-17.02: submission-scope parameters not stated for some entities: device_and_system_impact (3/3), controls_or_compensating_controls (3/3)",
+  "l2": [
+   "L2-17.02"
+  ],
+  "l1": [
+   "L1-17"
+  ],
+  "evidence": [
+   {
+    "entity": "vulnerability:CVE-2024-0727",
+    "doc_id": "D20",
+    "quote": "| CVE-2024-0727 |"
+   }
+  ]
+ },
+ {
+  "id": "F-0021",
+  "kind": "param",
+  "ref": "L2-17.04",
+  "severity": "S1",
+  "status": "break",
+  "message": "L2-17.04: submission-scope parameters not stated for some entities: kev_vulnerability_ids_present_in_release (1/1)",
+  "l2": [
+   "L2-17.04"
+  ],
+  "l1": [
+   "L1-17"
+  ],
+  "evidence": [
+   {
+    "entity": "vulnerability:KEV-check",
+    "doc_id": "D20",
+    "quote": "No KEV-listed vulnerabilities"
+   }
+  ]
+ },
+ {
+  "id": "F-0022",
+  "kind": "param",
+  "ref": "L2-21.01",
+  "severity": "S1",
+  "status": "break",
+  "message": "L2-21.01: submission-scope parameters not stated for some entities: applies_to_assets_interfaces (10/10), entities_authenticated (10/10), mechanism_algorithm_version (10/10), credential_lifecycle (10/10)",
+  "l2": [
+   "L2-21.01"
+  ],
+  "l1": [
+   "L1-21"
+  ],
+  "evidence": [
+   {
+    "entity": "security_control:SC-01",
+    "doc_id": "D18",
+    "quote": "| SC-01 |"
+   }
+  ]
+ },
+ {
+  "id": "F-0023",
+  "kind": "param",
+  "ref": "L2-23.01",
+  "severity": "S1",
+  "status": "break",
+  "message": "L2-23.01: submission-scope parameters not stated for some entities: tools_versions_settings (4/4), findings_ids (4/4), boundary_assumptions_rationale (4/4)",
+  "l2": [
+   "L2-23.01"
+  ],
+  "l1": [
+   "L1-23"
+  ],
+  "evidence": [
+   {
+    "entity": "test_case:ST-02",
+    "doc_id": "D19",
+    "quote": "| ST-02 |"
+   }
+  ]
+ },
+ {
+  "id": "F-0024",
+  "kind": "param",
+  "ref": "L2-23.02",
+  "severity": "S1",
+  "status": "break",
+  "message": "L2-23.02: submission-scope parameters not stated for some entities: tools_versions_settings (2/2), findings_ids (2/2), view_ids_covered (2/2), thwart_attempt_performed (2/2)",
+  "l2": [
+   "L2-23.02"
+  ],
+  "l1": [
+   "L1-23"
+  ],
+  "evidence": [
+   {
+    "entity": "test_case:ST-01",
+    "doc_id": "D19",
+    "quote": "| ST-01 |"
+   }
+  ]
+ },
+ {
+  "id": "F-0025",
+  "kind": "param",
+  "ref": "L2-23.03",
+  "severity": "S1",
+  "status": "break",
+  "message": "L2-23.03: submission-scope parameters not stated for some entities: tools_versions_settings (1/1), findings_ids (1/1), job_type (1/1)",
+  "l2": [
+   "L2-23.03"
+  ],
+  "l1": [
+   "L1-23"
+  ],
+  "evidence": [
+   {
+    "entity": "test_case:ST-07",
+    "doc_id": "D19",
+    "quote": "| ST-07 |"
+   }
+  ]
+ },
+ {
+  "id": "F-0026",
+  "kind": "param",
+  "ref": "L2-23.04",
+  "severity": "S1",
+  "status": "break",
+  "message": "L2-23.04: submission-scope parameters not stated for some entities: tester_expertise_evidence (1/1)",
+  "l2": [
+   "L2-23.04"
+  ],
+  "l1": [
+   "L1-23"
+  ],
+  "evidence": [
+   {
+    "entity": "test_report:PT-01",
+    "doc_id": "D19",
+    "quote": "Penetration test **PT-01**"
+   }
+  ]
+ },
+ {
+  "id": "F-0027",
+  "kind": "rule",
+  "ref": "R-01",
+  "severity": "S3",
+  "status": "break",
+  "message": "R-01 document SBOM-3.2.0: described_build_id='b1150' differs from A.release_build_id='b1187'. The SBOM must describe the release build (FDA-CY V.A.4).",
+  "l2": [
+   "L2-16.01"
+  ],
+  "l1": [
+   "L1-16"
+  ],
+  "evidence": [
+   {
+    "entity": "document:SBOM-3.2.0",
+    "doc_id": "D15",
+    "quote": "Generated **2026-03-18**"
+   }
+  ]
+ },
+ {
+  "id": "F-0028",
+  "kind": "chain",
+  "ref": "CC-01",
+  "severity": "S3",
+  "status": "break",
+  "message": "CC-01 requirement SRS-013: no passing run at the proposed build. TC-022: latest run TR-0422 result=fail; TC-031: passing run TR-0430 on build b1142 / version 3.1.4 not the release build b1187 and not bridged",
+  "l2": [
+   "L2-05.02",
+   "L2-09.05"
+  ],
+  "l1": [
+   "L1-05",
+   "L1-09"
+  ],
+  "evidence": [
+   {
+    "entity": "requirement:SRS-013",
+    "doc_id": "D04",
+    "quote": "| SRS-013 |"
+   }
+  ]
+ },
+ {
+  "id": "F-0029",
+  "kind": "chain",
+  "ref": "CC-01",
+  "severity": "S3",
+  "status": "break",
+  "message": "CC-01 requirement SRS-017 has no test case (verification_method=test)",
+  "l2": [
+   "L2-05.02",
+   "L2-09.02"
+  ],
+  "l1": [
+   "L1-05",
+   "L1-09"
+  ],
+  "evidence": [
+   {
+    "entity": "requirement:SRS-017",
+    "doc_id": "D04",
+    "quote": "| SRS-017 |"
+   }
+  ]
+ },
+ {
+  "id": "F-0030",
+  "kind": "chain",
+  "ref": "CC-02",
+  "severity": "S3",
+  "status": "break",
+  "message": "CC-02 risk control RC-07 has no effectiveness verification evidence (ISO 14971 7.2 distinguishes implementation from effectiveness)",
+  "l2": [
+   "L2-04.05"
+  ],
+  "l1": [
+   "L1-04"
+  ],
+  "evidence": [
+   {
+    "entity": "risk_control:RC-07",
+    "doc_id": "D07",
+    "quote": "| RC-07 |"
+   }
+  ]
+ },
+ {
+  "id": "F-0031",
+  "kind": "chain",
+  "ref": "CC-02",
+  "severity": "S2",
+  "status": "candidate",
+  "message": "CC-02 hazard/hazardous situation H-02 has no risk control traced to it",
+  "l2": [
+   "L2-04.03",
+   "L2-04.05"
+  ],
+  "l1": [
+   "L1-04"
+  ],
+  "evidence": [
+   {
+    "entity": "hazard:H-02",
+    "doc_id": "D07",
+    "quote": "| H-02 |"
+   }
+  ]
+ },
+ {
+  "id": "F-0032",
+  "kind": "chain",
+  "ref": "CC-02",
+  "severity": "S2",
+  "status": "candidate",
+  "message": "CC-02 hazard/hazardous situation H-08 has no risk control traced to it",
+  "l2": [
+   "L2-04.03",
+   "L2-04.05"
+  ],
+  "l1": [
+   "L1-04"
+  ],
+  "evidence": [
+   {
+    "entity": "hazard:H-08",
+    "doc_id": "D07",
+    "quote": "| H-08 |"
+   }
+  ]
+ },
+ {
+  "id": "F-0033",
+  "kind": "chain",
+  "ref": "CC-03",
+  "severity": "S3",
+  "status": "break",
+  "message": "CC-03 SOUP SOUP-01 (libdsp) version 4.1.2 but SBOM lists 4.1.0",
+  "l2": [
+   "L2-12.01",
+   "L2-16.02"
+  ],
+  "l1": [
+   "L1-12",
+   "L1-16"
+  ],
+  "evidence": [
+   {
+    "entity": "soup_component:SOUP-01",
+    "doc_id": "D14",
+    "quote": "| SOUP-01 |"
+   },
+   {
+    "entity": "soup_component:SOUP-01",
+    "doc_id": "D14",
+    "quote": "| SOUP-01 |"
+   }
+  ]
+ },
+ {
+  "id": "F-0034",
+  "kind": "chain",
+  "ref": "CC-03",
+  "severity": "S3",
+  "status": "break",
+  "message": "CC-03 SOUP SOUP-02 (zlib-ng): anomaly review covers version 2.1.3, SOUP in use is 2.1.6",
+  "l2": [
+   "L2-12.04"
+  ],
+  "l1": [
+   "L1-12"
+  ],
+  "evidence": [
+   {
+    "entity": "soup_component:SOUP-02",
+    "doc_id": "D14",
+    "quote": "| SOUP-02 |"
+   }
+  ]
+ },
+ {
+  "id": "F-0035",
+  "kind": "chain",
+  "ref": "CC-12",
+  "severity": "S1",
+  "status": "break",
+  "message": "CC-12p SOUP SOUP-02: anomaly review dated 2025-10-02 precedes the SOUP version release/adoption 2026-01-10; IEC 62304 7.1.3 requires version relevance, so this is an age note only",
+  "l2": [
+   "L2-12.04"
+  ],
+  "l1": [
+   "L1-12"
+  ],
+  "evidence": [
+   {
+    "entity": "soup_component:SOUP-02",
+    "doc_id": "D14",
+    "quote": "| SOUP-02 |"
+   }
+  ]
+ },
+ {
+  "id": "F-0036",
+  "kind": "chain",
+  "ref": "CC-04",
+  "severity": "S3",
+  "status": "break",
+  "message": "CC-04 security control SC-09 has no verification test",
+  "l2": [
+   "L2-21.01",
+   "L2-23.01"
+  ],
+  "l1": [
+   "L1-21",
+   "L1-23"
+  ],
+  "evidence": [
+   {
+    "entity": "security_control:SC-09",
+    "doc_id": "D18",
+    "quote": "| SC-09 |"
+   }
+  ]
+ },
+ {
+  "id": "F-0037",
+  "kind": "chain",
+  "ref": "CC-04",
+  "severity": "S3",
+  "status": "break",
+  "message": "CC-04/CC-12f security test PT-01 (L2-23.04) ran on build b1098 / version 3.1.0, not the release build b1187 and not bridged",
+  "l2": [
+   "L2-10.04",
+   "L2-23.04"
+  ],
+  "l1": [
+   "L1-10",
+   "L1-23"
+  ],
+  "evidence": [
+   {
+    "entity": "test_report:PT-01",
+    "doc_id": "D19",
+    "quote": "Penetration test **PT-01**"
+   }
+  ]
+ },
+ {
+  "id": "F-0038",
+  "kind": "anchor",
+  "ref": "CC-05",
+  "severity": "S3",
+  "status": "break",
+  "message": "CC-05 anchor A.release_build_id stated inconsistently: 'b1187' vs ['b1180']",
+  "l2": [],
+  "l1": [],
+  "evidence": [
+   {
+    "entity": "A.release_build_id",
+    "doc_id": "D01",
+    "quote": "Release build identifier: b1187"
+   },
+   {
+    "entity": "A.release_build_id",
+    "doc_id": "D03",
+    "quote": "Release build identifier: **b1187**"
+   },
+   {
+    "entity": "A.release_build_id",
+    "doc_id": "D10",
+    "quote": "release build **b1187**"
+   },
+   {
+    "entity": "A.release_build_id",
+    "doc_id": "D13",
+    "quote": "release candidate, build **b1180**"
+   }
+  ]
+ },
+ {
+  "id": "F-0039",
+  "kind": "anchor",
+  "ref": "CC-05",
+  "severity": "S3",
+  "status": "break",
+  "message": "CC-05 anchor A.labeled_version='3.2.1' differs from A.proposed_version='3.2.0'",
+  "l2": [],
+  "l1": [],
+  "evidence": [
+   {
+    "entity": "A.labeled_version",
+    "doc_id": "D23",
+    "quote": "software version **3.2.1**"
+   }
+  ]
+ },
+ {
+  "id": "F-0040",
+  "kind": "anchor",
+  "ref": "CC-05",
+  "severity": "S3",
+  "status": "break",
+  "message": "CC-05 anchor A.sbom_build.build='b1150' differs from A.release_build_id='b1187'",
+  "l2": [],
+  "l1": [],
+  "evidence": [
+   {
+    "entity": "A.sbom_build",
+    "doc_id": "D15",
+    "quote": "for build **b1150**"
+   }
+  ]
+ },
+ {
+  "id": "F-0041",
+  "kind": "chain",
+  "ref": "CC-05",
+  "severity": "S3",
+  "status": "break",
+  "message": "CC-05 L2-16.01 document SBOM-3.2.0: described_build_id='b1150' differs from A.release_build_id='b1187' and is not bridged in L2-10.04",
+  "l2": [
+   "L2-03.01",
+   "L2-16.01"
+  ],
+  "l1": [
+   "L1-03",
+   "L1-16"
+  ],
+  "evidence": [
+   {
+    "entity": "document:SBOM-3.2.0",
+    "doc_id": "D15",
+    "quote": "Generated **2026-03-18**"
+   }
+  ]
+ },
+ {
+  "id": "F-0042",
+  "kind": "chain",
+  "ref": "CC-05",
+  "severity": "S3",
+  "status": "break",
+  "message": "CC-05 L2-11.03 anomaly ANM-list-3.2.0: list_build_id='b1180' differs from A.release_build_id='b1187' and is not bridged in L2-10.04",
+  "l2": [
+   "L2-03.01",
+   "L2-11.03"
+  ],
+  "l1": [
+   "L1-03",
+   "L1-11"
+  ],
+  "evidence": [
+   {
+    "entity": "anomaly:ANM-list-3.2.0",
+    "doc_id": "D13",
+    "quote": "Open anomalies: 5"
+   }
+  ]
+ },
+ {
+  "id": "F-0043",
+  "kind": "chain",
+  "ref": "CC-06",
+  "severity": "S3",
+  "status": "break",
+  "message": "CC-06 unresolved-anomaly list describes build b1180, release build is b1187",
+  "l2": [
+   "L2-03.02",
+   "L2-11.03"
+  ],
+  "l1": [
+   "L1-03",
+   "L1-11"
+  ],
+  "evidence": [
+   {
+    "entity": "anomaly:ANM-list-3.2.0",
+    "doc_id": "D13",
+    "quote": "Open anomalies: 5"
+   }
+  ]
+ },
+ {
+  "id": "F-0044",
+  "kind": "chain",
+  "ref": "CC-06",
+  "severity": "S2",
+  "status": "break",
+  "message": "CC-06 anomaly list extracted 2026-04-05, before the last test run ended 2026-04-06",
+  "l2": [
+   "L2-09.05",
+   "L2-11.03"
+  ],
+  "l1": [
+   "L1-09",
+   "L1-11"
+  ],
+  "evidence": [
+   {
+    "entity": "anomaly:ANM-list-3.2.0",
+    "doc_id": "D13",
+    "quote": "Open anomalies: 5"
+   }
+  ]
+ },
+ {
+  "id": "F-0045",
+  "kind": "chain",
+  "ref": "CC-22",
+  "severity": "S2",
+  "status": "break",
+  "message": "CC-22 anomaly list states 10 open anomalies; 6 anomaly records were extracted",
+  "l2": [
+   "L2-11.01",
+   "L2-11.03"
+  ],
+  "l1": [
+   "L1-11"
+  ],
+  "evidence": [
+   {
+    "entity": "anomaly:ANM-list-3.2.0",
+    "doc_id": "D13",
+    "quote": "Open anomalies: 5"
+   }
+  ]
+ },
+ {
+  "id": "F-0046",
+  "kind": "chain",
+  "ref": "CC-06",
+  "severity": "S3",
+  "status": "break",
+  "message": "CC-06 failed run TR-0434 raised ['ANM-109'], not on the unresolved list and no passing retest",
+  "l2": [
+   "L2-09.05",
+   "L2-11.01"
+  ],
+  "l1": [
+   "L1-09",
+   "L1-11"
+  ],
+  "evidence": [
+   {
+    "entity": "test_run:TR-0434",
+    "doc_id": "D10",
+    "quote": "| TR-0434 |"
+   }
+  ]
+ },
+ {
+  "id": "F-0047",
+  "kind": "chain",
+  "ref": "CC-07",
+  "severity": "S3",
+  "status": "break",
+  "message": "CC-07 declaration DoC-3: edition in 'ANSI/UL 2900-1, Second Edition (2023)' is not the recognized edition (ANSI/UL 2900-1 First Edition 2017); the DoC can only be treated as general use",
+  "l2": [
+   "L2-28.01",
+   "L2-28.02"
+  ],
+  "l1": [
+   "L1-28"
+  ],
+  "evidence": [
+   {
+    "entity": "declaration:DoC-3",
+    "doc_id": "D22",
+    "quote": "| DoC-3 |"
+   }
+  ]
+ },
+ {
+  "id": "F-0048",
+  "kind": "chain",
+  "ref": "CC-11",
+  "severity": "S2",
+  "status": "break",
+  "message": "CC-11 SBOM component BlueZ 5.66 has no SOUP/OTS list row: no IEC 62304 7.1 evaluation or 7.1.3 anomaly-list review is shown for it",
+  "l2": [
+   "L2-12.01",
+   "L2-16.02"
+  ],
+  "l1": [
+   "L1-12",
+   "L1-16"
+  ],
+  "evidence": [
+   {
+    "entity": "sbom_entry:BlueZ",
+    "doc_id": "D15",
+    "quote": "| BlueZ |"
+   }
+  ]
+ },
+ {
+  "id": "F-0049",
+  "kind": "chain",
+  "ref": "CC-11",
+  "severity": "S2",
+  "status": "break",
+  "message": "CC-11 SBOM component libcurl 8.5.0 has no SOUP/OTS list row: no IEC 62304 7.1 evaluation or 7.1.3 anomaly-list review is shown for it",
+  "l2": [
+   "L2-12.01",
+   "L2-16.02"
+  ],
+  "l1": [
+   "L1-12",
+   "L1-16"
+  ],
+  "evidence": [
+   {
+    "entity": "sbom_entry:libcurl",
+    "doc_id": "D15",
+    "quote": "| libcurl |"
+   }
+  ]
+ },
+ {
+  "id": "F-0050",
+  "kind": "chain",
+  "ref": "CC-11",
+  "severity": "S2",
+  "status": "break",
+  "message": "CC-11 SBOM component protobuf 25.2 has no SOUP/OTS list row: no IEC 62304 7.1 evaluation or 7.1.3 anomaly-list review is shown for it",
+  "l2": [
+   "L2-12.01",
+   "L2-16.02"
+  ],
+  "l1": [
+   "L1-12",
+   "L1-16"
+  ],
+  "evidence": [
+   {
+    "entity": "sbom_entry:protobuf",
+    "doc_id": "D15",
+    "quote": "| protobuf |"
+   }
+  ]
+ },
+ {
+  "id": "F-0051",
+  "kind": "chain",
+  "ref": "CC-11",
+  "severity": "S2",
+  "status": "break",
+  "message": "CC-11 SBOM component glibc 2.36 has no SOUP/OTS list row: no IEC 62304 7.1 evaluation or 7.1.3 anomaly-list review is shown for it",
+  "l2": [
+   "L2-12.01",
+   "L2-16.02"
+  ],
+  "l1": [
+   "L1-12",
+   "L1-16"
+  ],
+  "evidence": [
+   {
+    "entity": "sbom_entry:glibc",
+    "doc_id": "D15",
+    "quote": "| glibc |"
+   }
+  ]
+ },
+ {
+  "id": "F-0052",
+  "kind": "chain",
+  "ref": "CC-11",
+  "severity": "S2",
+  "status": "break",
+  "message": "CC-11 SBOM component busybox 1.36.1 has no SOUP/OTS list row: no IEC 62304 7.1 evaluation or 7.1.3 anomaly-list review is shown for it",
+  "l2": [
+   "L2-12.01",
+   "L2-16.02"
+  ],
+  "l1": [
+   "L1-12",
+   "L1-16"
+  ],
+  "evidence": [
+   {
+    "entity": "sbom_entry:busybox",
+    "doc_id": "D15",
+    "quote": "| busybox |"
+   }
+  ]
+ },
+ {
+  "id": "F-0053",
+  "kind": "chain",
+  "ref": "CC-11",
+  "severity": "S2",
+  "status": "break",
+  "message": "CC-11 SBOM component mbedtls (bootloader) 3.5.2 has no SOUP/OTS list row: no IEC 62304 7.1 evaluation or 7.1.3 anomaly-list review is shown for it",
+  "l2": [
+   "L2-12.01",
+   "L2-16.02"
+  ],
+  "l1": [
+   "L1-12",
+   "L1-16"
+  ],
+  "evidence": [
+   {
+    "entity": "sbom_entry:mbedtls (bootloader)",
+    "doc_id": "D15",
+    "quote": "| mbedtls (bootloader) |"
+   }
+  ]
+ },
+ {
+  "id": "F-0054",
+  "kind": "chain",
+  "ref": "CC-11",
+  "severity": "S3",
+  "status": "break",
+  "message": "CC-11 41 test run(s) used 'libdsp 4.1.2'; the SBOM ships libdsp 4.1.0 (e.g. TR-0401)",
+  "l2": [
+   "L2-09.05",
+   "L2-16.02"
+  ],
+  "l1": [
+   "L1-09",
+   "L1-16"
+  ],
+  "evidence": [
+   {
+    "entity": "test_run:TR-0401",
+    "doc_id": "D10",
+    "quote": "| TR-0401 |"
+   },
+   {
+    "entity": "soup_component:SOUP-01",
+    "doc_id": "D14",
+    "quote": "| SOUP-01 |"
+   }
+  ]
+ },
+ {
+  "id": "F-0055",
+  "kind": "chain",
+  "ref": "CC-12",
+  "severity": "S2",
+  "status": "break",
+  "message": "CC-12b run TR-0408 started 2026-03-24 before its protocol TC-008 was approved 2026-03-25",
+  "l2": [
+   "L2-09.02",
+   "L2-09.05"
+  ],
+  "l1": [
+   "L1-09"
+  ],
+  "evidence": [
+   {
+    "entity": "test_run:TR-0408",
+    "doc_id": "D10",
+    "quote": "| TR-0408 |"
+   },
+   {
+    "entity": "test_case:TC-008",
+    "doc_id": "D09",
+    "quote": "| TC-008 |"
+   }
+  ]
+ },
+ {
+  "id": "F-0056",
+  "kind": "chain",
+  "ref": "CC-12",
+  "severity": "S2",
+  "status": "break",
+  "message": "CC-12c SBOM generated 2026-03-18 before code freeze 2026-03-20; it may not describe the frozen baseline (content mismatch is checked by CC-11)",
+  "l2": [
+   "L2-03.04",
+   "L2-16.01"
+  ],
+  "l1": [
+   "L1-03",
+   "L1-16"
+  ],
+  "evidence": [
+   {
+    "entity": "document:SBOM-3.2.0",
+    "doc_id": "D15",
+    "quote": "Generated **2026-03-18**"
+   }
+  ]
+ },
+ {
+  "id": "F-0057",
+  "kind": "chain",
+  "ref": "CC-12",
+  "severity": "S2",
+  "status": "break",
+  "message": "CC-12r threat model dated 2026-01-30 predates security-relevant change CH-31 introduced in version 3.2.0 (2026-03-21)",
+  "l2": [
+   "L2-10.02",
+   "L2-14.01"
+  ],
+  "l1": [
+   "L1-10",
+   "L1-14"
+  ],
+  "evidence": [
+   {
+    "entity": "software_version:CH-31",
+    "doc_id": "D12",
+    "quote": "| CH-31 |"
+   }
+  ]
+ },
+ {
+  "id": "F-0058",
+  "kind": "chain",
+  "ref": "CC-13",
+  "severity": "S3",
+  "status": "break",
+  "message": "CC-13 vulnerability CVE-2024-2511 is assessed against 'OpenSSL 1.1.1w'; the SBOM ships OpenSSL 3.0.13. The assessment refers to a component version not in the release",
+  "l2": [
+   "L2-16.02",
+   "L2-17.01"
+  ],
+  "l1": [
+   "L1-16",
+   "L1-17"
+  ],
+  "evidence": [
+   {
+    "entity": "vulnerability:CVE-2024-2511",
+    "doc_id": "D20",
+    "quote": "| CVE-2024-2511 |"
+   },
+   {
+    "entity": "soup_component:SOUP-03",
+    "doc_id": "D14",
+    "quote": "| SOUP-03 |"
+   }
+  ]
+ },
+ {
+  "id": "F-0059",
+  "kind": "chain",
+  "ref": "CC-22",
+  "severity": "S2",
+  "status": "break",
+  "message": "CC-22 test report SVR-3.2 states 40 passed; recount of latest runs per test case gives 44 pass / 2 fail over 47 cases (understates; misleading if the summary is relied on)",
+  "l2": [
+   "L2-09.05",
+   "L2-09.07"
+  ],
+  "l1": [
+   "L1-09"
+  ],
+  "evidence": [
+   {
+    "entity": "test_report:SVR-3.2",
+    "doc_id": "D10",
+    "quote": "All 40 system test cases passed on build b1187"
+   }
+  ]
+ },
+ {
+  "id": "F-0060",
+  "kind": "chain",
+  "ref": "CC-22",
+  "severity": "S2",
+  "status": "break",
+  "message": "CC-22 penetration test PT-01 states 6 findings; 2 finding records reference it",
+  "l2": [
+   "L2-23.04",
+   "L2-23.06"
+  ],
+  "l1": [
+   "L1-23"
+  ],
+  "evidence": [
+   {
+    "entity": "test_report:PT-01",
+    "doc_id": "D19",
+    "quote": "Penetration test **PT-01**"
+   }
+  ]
+ },
+ {
+  "id": "F-0061",
+  "kind": "chain",
+  "ref": "CC-23",
+  "severity": "S2",
+  "status": "candidate",
+  "message": "CC-23 penetration test PT-01 performed by 'Halden internal development team (two engineers from the ARR software team)'; independence from the development team is not shown",
+  "l2": [
+   "L2-23.04"
+  ],
+  "l1": [
+   "L1-23"
+  ],
+  "evidence": [
+   {
+    "entity": "test_report:PT-01",
+    "doc_id": "D19",
+    "quote": "Penetration test **PT-01**"
+   }
+  ]
+ }
+]

@@ -1,0 +1,209 @@
+{
+  "job_id": "J-I-03",
+  "documents_read": ["D01","D02","D03","D04","D05","D06","D07","D08","D09","D10","D11","D12","D13","D14","D15","D16","D17","D18","D19","D20","D21","D22","D23"],
+  "bins": [
+    {
+      "l1": "L1-16",
+      "expected_evidence": "A machine-readable SBOM (SPDX/CycloneDX) bound to the proposed release build b1187 of 3.2.0, with generation date and tool, covering all platforms (Hub v2 and Hub v3), manufacturer, third-party and transitive components. Each entry carries the NTIA baseline attributes plus level of support and end-of-support date, and any unavailable field is justified.",
+      "found": [
+        {"what": "SBOM identity: 'Format: CycloneDX 1.5 (JSON; this document is the human-readable rendering). Generated 2026-03-18 by the DevSecOps pipeline (syft 0.105) for build b1150, software version 3.2.0. Transitive dependencies included.'", "doc_id": "D15", "locator": "section 1", "note": "Build b1150, not the release build b1187"},
+        {"what": "Component table with 14 entries: supplier, version, purl identifier, relationship, level of support, end of support, known vulnerabilities", "doc_id": "D15", "locator": "section 2 table", "note": "Every relationship is a flat 'depends-on'. No dependency hierarchy is shown even though the SBOM says transitive dependencies are included"},
+        {"what": "SBOM author/approver: 'DevSecOps pipeline (automated); reviewed P. Haas'; approval date 2026-03-18", "doc_id": "D15", "locator": "header", "note": "NTIA author and timestamp are present"},
+        {"what": "Configuration item list for release baseline b1187 (CI-01 to CI-10), which can be cross-checked against the SBOM", "doc_id": "D03", "locator": "section 3 table", "note": "Lists libdsp 4.1.2, kernel 5.15.148 for Hub v2, mbedtls 3.5.2"},
+        {"what": "SOUP/OTS list SOUP-01 to SOUP-06 with versions and suppliers", "doc_id": "D14", "locator": "section 1 table", "note": "Six items only"},
+        {"what": "Labeling says the SBOM is made available to users: 'The SBOM for version 3.2.0 is available from the Halden customer portal.'", "doc_id": "D23", "locator": "section 3", "note": "The same IFU says it applies to version 3.2.1 (section 1)"},
+        {"what": "Postmarket SBOM maintenance: 'SBOM re-scan at every build and monthly in the field'", "doc_id": "D21", "locator": "section 2", "note": ""}
+      ],
+      "not_found": [
+        {"what": "The machine-readable CycloneDX JSON file itself. Only a 'human-readable rendering' is supplied", "searched": "all documents; searched for 'CycloneDX', 'JSON', 'SPDX', 'SBOM', 'attachment'"},
+        {"what": "The Hub v2 BSP SBOM (SBOM-HUBV2-5.15) for Linux 5.15.148, which D15 says is a separate file. Hub v2 is a supported platform (D02, D03 CI-09, SRS-014)", "searched": "all documents; searched for 'SBOM-HUBV2', '5.15', 'Hub v2'"},
+        {"what": "An SBOM generated for the release build b1187 (after code freeze 2026-03-20 / build date 2026-03-21)", "searched": "all documents; searched for 'b1187' together with 'SBOM'; D21's 'SBOM re-scan at every build' has no b1187 record"},
+        {"what": "Justification for missing end-of-support dates (L2-16.03). The field is '—' for zlib-ng, SQLite, BlueZ, libcurl, protobuf, busybox and mbedtls", "searched": "all documents; searched for 'justif', 'not available', 'unknown', 'end of support'"}
+      ],
+      "parameter_concerns": [
+        {"what": "The SBOM describes build b1150, generated 2026-03-18. Code freeze was 2026-03-20 (CH-32 last), the release build b1187 is dated 2026-03-21, and D01 section 4 says all documents describe b1187 'unless stated otherwise'. No SBOM for b1187 is provided and no statement says the composition is equivalent", "doc_id": "D15", "locator": "section 1; cf. D03 sections 2 and 5"},
+        {"what": "libdsp version: the SBOM lists 'libdsp 4.1.0' (pkg:generic/libdsp@4.1.0), but D03 CI-03, D14 SOUP-01 and every D10 run configuration list 4.1.2. D03 marks libdsp as 'Changed since 3.1.4: yes'", "doc_id": "D15", "locator": "section 2, libdsp row"},
+        {"what": "The SBOM has components that are absent from the SOUP list D14 and the configuration item list D03: BlueZ 5.66, libcurl 8.5.0, protobuf 25.2, glibc 2.36, busybox 1.36.1 and the CS-Patch firmware interface lib 2.4.0. mbedtls is in D03 (CI-10) but not in D14", "doc_id": "D15", "locator": "section 2 vs D14 section 1, D03 section 3"},
+        {"what": "Qt end of support is given as 2026-05-26, about three weeks after the module submission date (2026-05-04). D20 says a commercial extended contract runs to 2028, but the SBOM entry was not updated", "doc_id": "D15", "locator": "Qt row; D20 section 3"},
+        {"what": "Several end-of-support dates fall before the device support end of 2032-12-31 (D21 section 5; D23 section 4): OpenSSL 2026-09-07, glibc 2026-06-30, Linux kernel 2026-12-31, libdsp 2028-06-30", "doc_id": "D15", "locator": "section 2"},
+        {"what": "The SBOM's 'Known vulnerabilities' column lists 2 CVEs (CVE-2024-0727, CVE-2023-46218). The vulnerability assessment run on the same SBOM lists 3 (adds CVE-2024-2511)", "doc_id": "D15", "locator": "section 2 vs D20 section 1"},
+        {"what": "The labeling offers an SBOM 'for version 3.2.0', while the IFU's own identification section says it applies to version 3.2.1", "doc_id": "D23", "locator": "sections 1 and 3"}
+      ],
+      "contradictions": [
+        {"what": "libdsp version: SBOM 4.1.0 vs configuration baseline, SOUP list and test configuration 4.1.2. D14 section 4 also claims SOUP is exercised 'at the versions listed in section 1 and in D15', which are not the same", "doc_ids": ["D15","D03","D14","D10"]},
+        {"what": "D01 section 4 says all documents describe build b1187; D15 states build b1150", "doc_ids": ["D01","D15"]},
+        {"what": "The SOUP/OTS list (6 items) and the SBOM (13 third-party/internal components) do not match in membership", "doc_ids": ["D14","D15","D03"]}
+      ]
+    },
+    {
+      "l1": "L1-17",
+      "expected_evidence": "A current list of all known vulnerabilities (NVD and CISA KEV) for every component actually in the release SBOM, stating discovery method and date, each with a safety and security risk assessment and controls. Components reaching end of support before the device support end have replacement plans, and KEV vulnerabilities are designed out, checked against the release build close to submission.",
+      "found": [
+        {"what": "Known-vulnerability list: 'SBOM scan with Grype 0.74 against NVD and the CISA KEV catalogue on 2026-03-19 (KEV check date 2026-03-19). Scan target: SBOM for build b1150.' Three CVEs, each with discovery, KEV flag, assessment and disposition", "doc_id": "D20", "locator": "section 1 table", "note": "Scan target is b1150, not b1187"},
+        {"what": "KEV statement: 'No KEV-listed vulnerabilities are present in the release.'", "doc_id": "D20", "locator": "section 2", "note": "Based on the 2026-03-19 scan of b1150"},
+        {"what": "Support horizon: OpenSSL 3.0 LTS end 2026-09-07 with 'migration to 3.3 LTS planned for release 3.3.0 (Q4 2026)'; Qt 6.5 LTS end 2026-05-26 with 'commercial extended support contract in place to 2028'", "doc_id": "D20", "locator": "section 3"},
+        {"what": "SOUP published-anomaly review that includes a security cross-check per SOUP item; CVE-2024-0727 assessed as not applicable", "doc_id": "D14", "locator": "section 2 table"},
+        {"what": "Postmarket monitoring: weekly NVD/KEV/vendor advisory monitoring and patch timelines (30/60 days)", "doc_id": "D21", "locator": "sections 2 and 4"},
+        {"what": "Security risk entries (CWE-based, CVSS 3.1) for threats T-01 to T-08", "doc_id": "D17", "locator": "section 2", "note": "None of the D20 CVEs appear in D17"}
+      ],
+      "not_found": [
+        {"what": "A vulnerability scan or KEV check of the release build b1187, or any refresh between 2026-03-19 and submission 2026-05-04", "searched": "all documents; searched for 'Grype', 'scan', 'KEV', 'b1187'. D19 lists Grype 0.74 as a tool but gives no scan record or results"},
+        {"what": "A vulnerability assessment of the Hub v2 platform (Linux 5.15.148 BSP; separate SBOM not supplied)", "searched": "all documents; searched for '5.15', 'Hub v2', 'SBOM-HUBV2'"},
+        {"what": "A safety-risk assessment per vulnerability (link to D07 hazards / HS) and CVSS/exploitability scoring per CVE. D20 gives only applicability rationale", "searched": "D07, D17, D20; searched for 'CVE', 'CVSS', 'HS-', 'safety'"},
+        {"what": "Support-horizon and replacement plans for glibc (Debian LTS end 2026-06-30), Linux kernel 6.1 (2026-12-31), Hub v2 kernel 5.15, libdsp (2028-06-30), and components with unknown end of support, against the device support end of 2032-12-31", "searched": "D15, D20, D21, D14; searched for 'end of support', 'migration', 'replacement', 'glibc', 'kernel'"},
+        {"what": "Known vulnerabilities for the Linux kernel 6.1.77, glibc 2.36, busybox, BlueZ, protobuf. The list has zero entries for these components, which is implausible for a kernel and C library scanned against NVD in 2026", "searched": "D15, D20, D14"}
+      ],
+      "parameter_concerns": [
+        {"what": "The scan target is the b1150 SBOM, dated 2026-03-19, before code freeze (2026-03-20) and the release build b1187 (2026-03-21). The KEV conclusion 'not present in the release' rests on a non-release build and is about 6.5 weeks old at submission", "doc_id": "D20", "locator": "section 1 header text"},
+        {"what": "CVE-2024-2511 is assessed against 'OpenSSL 1.1.1w', a component that does not appear in the SBOM (D15 lists only OpenSSL 3.0.13), in D14 or in D03. The assessment is not made against a component actually in the SBOM. Reviewer knowledge, to be verified: CVE-2024-2511 also affects OpenSSL 3.0.x up to 3.0.13, so the in-SBOM OpenSSL 3.0.13 is probably affected and has not been assessed", "doc_id": "D20", "locator": "section 1, row 3"},
+        {"what": "CVE-2024-2511 'mitigated by rate limiting SC-08'. SC-08 is connection rate limiting on the sync listener (D18), and D20 does not show that this addresses unbounded session-cache growth on every TLS path (e.g., outbound portal client, P-02)", "doc_id": "D20", "locator": "section 1, row 3; D18 SC-08"},
+        {"what": "Reviewer knowledge, to be verified: CVE-2023-46218 is reported as fixed in curl 8.5.0, so a scanner hit on libcurl 8.5.0 is questionable. Conversely, curl 8.5.0 has later published CVEs that are not listed", "doc_id": "D20", "locator": "section 1, row 2"},
+        {"what": "The OpenSSL replacement plan targets '3.3 LTS'. To reviewer knowledge, OpenSSL 3.3 is not an LTS branch and its support ended in April 2026, before the planned Q4 2026 migration. The plan also leaves a gap between OpenSSL 3.0 end of support (2026-09-07) and release 3.3.0 (Q4 2026)", "doc_id": "D20", "locator": "section 3"},
+        {"what": "The zlib-ng anomaly/vulnerability review was performed on 2025-10-02 against 'List version scope 2.1.3', while the component in the release is 2.1.6, adopted 2026-01-10. The security cross-check predates and does not match the shipped version", "doc_id": "D14", "locator": "section 2, SOUP-02 row"},
+        {"what": "The libdsp vulnerability status rests on the SBOM entry for 4.1.0, while 4.1.2 is shipped. D14's errata review covers 4.1.2 dated 2026-02-02", "doc_id": "D15", "locator": "libdsp row; D14 section 2"},
+        {"what": "D14's OpenSSL review on 2026-03-10 lists only CVE-2024-0727 for 3.0.13; D20 nine days later adds CVE-2024-2511 (as 1.1.1w). The SOUP cross-check and the vulnerability assessment disagree", "doc_id": "D14", "locator": "section 2, SOUP-03 row"}
+      ],
+      "contradictions": [
+        {"what": "The SBOM lists 2 known vulnerabilities; the vulnerability assessment of the same SBOM (b1150) lists 3", "doc_ids": ["D15","D20"]},
+        {"what": "D20 assesses OpenSSL 1.1.1w; the SBOM, SOUP list and configuration list contain only OpenSSL 3.0.13", "doc_ids": ["D20","D15","D14","D03"]},
+        {"what": "Qt end of support: SBOM says 2026-05-26 with no further note; D20 says extended support to 2028", "doc_ids": ["D15","D20"]}
+      ]
+    },
+    {
+      "l1": "L1-21",
+      "expected_evidence": "For the Authentication category, security requirements with acceptance criteria, the implementation, and effectiveness testing at every trust boundary of the architecture (BLE, portal link and inbound listener, USB service port, clinician UI). Any control outside the FDA Appendix 1 categories is traced to the risks it addresses.",
+      "found": [
+        {"what": "Controls-by-category table; Authentication controls are SC-02 (SEC-002, 'Password policy and lockout in auth service', ST-03) and SC-06 (SEC-006, 'Mutual TLS on sync listener (new in 3.2.0)', ST-05); Authorization SC-10 (role-based access, ST-03)", "doc_id": "D18", "locator": "section 1 table"},
+        {"what": "Acceptance criteria in requirements: SRS-020 'username and password of >= 12 characters, or SSO'; SEC-002 'lockout after 5 failures for 15 min'; SEC-006 'accepts connections only from the paired portal (mutual TLS)'", "doc_id": "D04", "locator": "section 2 SRS-020; section 3 SEC-002, SEC-006"},
+        {"what": "Communication paths with protection, including P-01 BLE 'LE Secure Connections ... authenticated pairing' and P-04 'Sync listener, TCP 8443 inbound (LAN only), mutual TLS'", "doc_id": "D18", "locator": "section 3 table"},
+        {"what": "System tests for authentication: TC-017 (SRS-020, SEC-002) pass on b1187 2026-03-24; TC-038 (SRS-020) pass 2026-03-29; TC-024 (SEC-006) pass 2026-03-31", "doc_id": "D10", "locator": "section 4, TR-0417, TR-0437, TR-0424"},
+        {"what": "Security tests ST-03 (SC-02, SC-10) and ST-05 (SC-04, SC-06, SC-10; T-04, T-08) on b1187", "doc_id": "D19", "locator": "section 1 table"},
+        {"what": "Integration test IT-04 (IF-04, SRS-020, SEC-002) on b1187", "doc_id": "D11", "locator": "section 2"},
+        {"what": "Threat-to-control traceability T-02/SR-02/SC-02,SC-10/SEC-002/ST-03 and T-08/SR-08/SC-10,SC-06", "doc_id": "D17", "locator": "section 7"}
+      ],
+      "not_found": [
+        {"what": "Authentication requirement and control for the USB service port IF-03 (service tool sessions). Only package signing (SC-01) is specified; the 'service' role in SC-10 has no authentication mechanism stated for IF-03", "searched": "D04, D05, D16, D18, D19; searched for 'service', 'IF-03', 'USB', 'authentic'"},
+        {"what": "A security requirement / acceptance criterion and test for BLE pairing authentication (P-01 'authenticated pairing'). It is listed as protection but not as a control, requirement or test", "searched": "D04, D18, D19; searched for 'pairing', 'LE Secure', 'BLE'"},
+        {"what": "Test evidence for the SSO alternative allowed by SRS-020", "searched": "all documents; searched for 'SSO'"},
+        {"what": "Security architecture views (Annex A diagrams SA-01 to SA-04: global, multi-patient harm, updatability, security use-case)", "searched": "all documents; searched for 'Annex A', 'SA-01', 'view'"},
+        {"what": "Any declared alternate or additional controls outside Appendix 1 with risk traces (L2-21.09). All controls are mapped to FDA categories; no alternate controls are identified, so nothing to trace", "searched": "D17, D18; searched for 'alternate', 'additional', 'compensating'"}
+      ],
+      "parameter_concerns": [
+        {"what": "SC-07 (BLE frame counter/nonce) and SC-08 (rate limiting) trace to SRS-001 (ECG acquisition) and SRS-024 (load degradation), not to security requirements. There are no security acceptance criteria for these controls", "doc_id": "D18", "locator": "section 1, SC-07 and SC-08 rows; D17 section 7"},
+        {"what": "SC-09 (security event forwarding) has no verification test ('—')", "doc_id": "D18", "locator": "section 1, SC-09 row"},
+        {"what": "Security architecture D18 Rev 2.0 approved 2026-02-20; threat model D16 dated 2026-01-30 'as designed in D05 Rev 2.2', while D05 is now Rev 2.3. The threat model predates SEC-006 / CH-31 (review 2026-02-11)", "doc_id": "D16", "locator": "section 1"},
+        {"what": "The architecture document D05 Rev 2.3 describes IF-02 only as 'port 443 outbound'. D18 P-04 and the IFU (D23 section 2) describe an inbound TCP 8443 listener (portal → hub). The authentication control SC-06 sits on an interface that the system architecture does not show", "doc_id": "D05", "locator": "section 2, IF-02 row"}
+      ],
+      "contradictions": [
+        {"what": "IF-02 is outbound 443 only in the architecture vs an additional inbound TCP 8443 sync listener in the security architecture and labeling", "doc_ids": ["D05","D18","D23"]},
+        {"what": "T-01 verification: D18 maps SC-01 to ST-02 only and D16 maps T-01 to ST-02; D17 section 7 and D07 RC-05 cite ST-01 (threat mitigation) as the test", "doc_ids": ["D16","D17","D18","D07","D19"]}
+      ]
+    },
+    {
+      "l1": "L1-23",
+      "expected_evidence": "Security requirements testing with boundary analysis; threat-mitigation tests for each threat in the four views, including attempts to defeat each mitigation; vulnerability testing (fuzz, attack surface, chaining, known-vuln scan, binary SCA, SAST/DAST) with tools, versions, settings and findings. An independent penetration test on the final build with the original report; tester objectivity for each activity; every finding assessed with deferral plans; and testing cadence through development and postmarket.",
+      "found": [
+        {"what": "Security test table ST-01 to ST-07, all on '3.2.0 (b1187)', 2026-03-30 to 2026-04-06, tester 'Halden product security team (separate from development)', findings 'none' for all", "doc_id": "D19", "locator": "section 1 table", "note": "Dates fall after code freeze (2026-03-20) and the b1187 build (2026-03-21) and within the D09 window"},
+        {"what": "Tools 'OWASP ZAP 2.14, boofuzz 0.4.2, Grype 0.74, Halden BLE fuzzer v0.4. Scope: IF-01 to IF-05. No findings; boundary assumptions in Annex B.'", "doc_id": "D19", "locator": "section 1, text below table", "note": "No settings or configuration given"},
+        {"what": "Penetration test PT-01: version 3.1.0 (build b1098), 2025-11-03 to 2025-11-14, 'performed by Halden internal development team (two engineers from the ARR software team)', 10 person-days, scope IF-01 to IF-04, OWASP MASVS/ASVS, 'Result: 3 findings (0 critical, 1 high, 2 medium)'; findings table PF-01, PF-02", "doc_id": "D19", "locator": "section 2"},
+        {"what": "'No retest was performed; both findings were verified closed by code review. No penetration test has been performed on 3.2.0; the attack surface change of CH-31 (new inbound sync listener) was covered by threat-mitigation test ST-05.'", "doc_id": "D19", "locator": "section 2, final paragraph"},
+        {"what": "'No deferred security findings. Future-release plan: none required.'", "doc_id": "D19", "locator": "section 3"},
+        {"what": "Security system tests TC-010, TC-017, TC-018, TC-019, TC-023, TC-024, TC-036, TC-038, TC-039 (protocols TP-SEC-01/02) on b1187", "doc_id": "D10", "locator": "section 4"},
+        {"what": "Static analysis 'Coverity 2024.3 at every merge'", "doc_id": "D08", "locator": "section 4", "note": "Process statement only, no results"},
+        {"what": "Postmarket cadence: SBOM re-scan every build and monthly; weekly advisory monitoring; quarterly maintenance releases", "doc_id": "D21", "locator": "sections 2 and 4"},
+        {"what": "PT-01 also referenced in version history for 3.1.0 b1098 dated 2025-10-20", "doc_id": "D12", "locator": "section 1 table"}
+      ],
+      "not_found": [
+        {"what": "A penetration test on 3.2.0 / b1187, and any independent (third-party) penetration test", "searched": "all documents; searched for 'penetration', 'PT-0', 'third-party', 'independent'"},
+        {"what": "The original penetration test report PT-01-R1 ('attached (Annex C)'), which is not among the supplied documents", "searched": "all documents; searched for 'PT-01-R1', 'Annex C'"},
+        {"what": "Boundary analysis and rationale (D19 Annex B), which is not supplied", "searched": "all documents; searched for 'Annex B', 'boundary'"},
+        {"what": "Attack surface analysis, vulnerability chaining, binary SCA / static binary analysis, malware testing, SAST results (Coverity output) and DAST results, or justification for omitting them", "searched": "all documents; searched for 'attack surface', 'chain', 'binary', 'SAST', 'DAST', 'malware', 'Coverity', 'static'"},
+        {"what": "A known-vulnerability scan record on b1187. Grype is listed as a D19 tool, but the only scan record is D20 on b1150", "searched": "D19, D20, D21; searched for 'Grype', 'scan'"},
+        {"what": "Threat-mitigation tests for T-02 (credential stuffing), T-03 (hub theft) and T-05 (audit log tampering). Only security-requirements tests (ST-03, ST-04, ST-06) cover them", "searched": "D16, D17, D19"},
+        {"what": "Threat-mitigation testing organised by the four architecture views (global, multi-patient, updatability, use-case)", "searched": "D18, D19; searched for 'view', 'multi-patient'"},
+        {"what": "Fuzz testing of IF-03 (USB service protocol) and IF-04. ST-07 covers SC-07/SC-08 (BLE and listener) only", "searched": "D19"},
+        {"what": "Objectivity means for attack surface analysis, vulnerability scanning and the penetration test (L2-23.05). The only statement is '(separate from development)' for ST-01 to ST-07", "searched": "D17, D19, D20, D21; searched for 'independen', 'objectiv', 'separate'"},
+        {"what": "Planned postmarket security testing at intervals (periodic penetration or security retest)", "searched": "D21, D08, D19; searched for 'post-release', 'interval', 'annual', 'periodic', 'penetration'"},
+        {"what": "Disposition of the third penetration test finding (summary counts 3, table lists 2)", "searched": "D19, D13, D12; searched for 'PF-03'"}
+      ],
+      "parameter_concerns": [
+        {"what": "The penetration test was performed on 3.1.0 build b1098 (2025-11), three builds and two change sets before release b1187. CH-31 (marked safety/security relevant in D12 section 2) added an inbound listener after the pen test. No retest; fixes were 'verified closed by code review' in build b1120", "doc_id": "D19", "locator": "section 2"},
+        {"what": "The penetration test was performed by 'two engineers from the ARR software team', the developers of the system under test. The tester is not independent", "doc_id": "D19", "locator": "section 2"},
+        {"what": "Pen test scope IF-01 to IF-04 excludes IF-05 (encrypted local store, T-03, T-05) and could not include the 3.2.0 inbound listener P-04", "doc_id": "D19", "locator": "section 2"},
+        {"what": "The same person (E. Varga, Product Security Lead) approves the threat model, security architecture, risk assessment, vulnerability assessment and security test report. No separate QA or independent approval of the security testing", "doc_id": "D19", "locator": "headers of D16 to D21"},
+        {"what": "D19 reports 'No findings' across all security tests, yet the security system test TC-018 (SEC-003 store encryption) failed on b1187 (TR-0440, ANM-101) in D10", "doc_id": "D10", "locator": "section 4, TR-0440, TR-0441"},
+        {"what": "The TC-018 failure handling is inconsistent. D10 section 5 says 'TR-0418 (TC-018) failed ... re-run as TR-0443 (pass)', but the table shows TR-0418 Pass, TR-0440 Fail (Hub v2) and TR-0441 retest Pass on a different platform (Hub v3). TR-0443 does not exist in the table. ANM-101 (audit export truncation) is an odd anomaly for an encryption test, and D13 lists ANM-101 as deferred, not fixed", "doc_id": "D10", "locator": "section 4 rows TR-0418/TR-0440/TR-0441; section 5; D13 ANM-101"},
+        {"what": "Tools are named with versions but no settings or configurations; the 'Halden BLE fuzzer v0.4' is an in-house tool without description", "doc_id": "D19", "locator": "section 1"},
+        {"what": "Security test types in D19 differ from the threat model: D16 lists ST-02, ST-03, ST-04, ST-06 as 'Threat-mitigation tests' for T-01, T-02, T-03, T-05, whereas D19 classes them as 'security requirements test' with 'Threats covered: —'", "doc_id": "D16", "locator": "section 4 vs D19 section 1"},
+        {"what": "Anomalies in D13 all carry 'Security impact assessed: yes' with no assessment result. D13 is scoped to build b1180, not b1187, and its count says 5 open but lists 6", "doc_id": "D13", "locator": "sections 1 and 2"}
+      ],
+      "contradictions": [
+        {"what": "Pen test summary says '3 findings (0 critical, 1 high, 2 medium)'; findings table lists only 2 (1 high, 1 medium); text says 'both findings were verified closed'", "doc_ids": ["D19"]},
+        {"what": "D19 says no security findings, but D10 shows a failed security test (TC-018 / SEC-003) on b1187", "doc_ids": ["D19","D10"]},
+        {"what": "D10 section 5 re-run identifier TR-0443 vs the table, which shows TR-0441 as the retest of TR-0440, and TR-0418 recorded as Pass", "doc_ids": ["D10"]},
+        {"what": "D16 calls ST-02/03/04/06 threat-mitigation tests; D19 classes them as security requirements tests with no threats covered", "doc_ids": ["D16","D19"]}
+      ]
+    },
+    {
+      "l1": "L1-26",
+      "expected_evidence": "An explicit section 524B cyber device screen answering each of the three conjunctive criteria with device facts (sponsor software; ability to connect to the internet; technological characteristics vulnerable to threats). Where all three are met, the 524B(b) documentation (postmarket plan, processes/procedures, SBOM) is mapped to the submitted documents.",
+      "found": [
+        {"what": "Facts relevant to criterion 1 (software validated/installed by sponsor): sponsor-developed ARR software 3.2.0 delivered as signed image", "doc_id": "D02", "locator": "section 3; D14 section 5"},
+        {"what": "Facts relevant to criterion 2 (internet connectivity): 'portal synchronisation to Halden Cloud (AWS eu-central-1) over TLS'; HTTPS outbound 443; inbound 8443 LAN listener; updates via portal", "doc_id": "D02", "locator": "section 3; D18 section 3; D21 section 4; D23 section 2"},
+        {"what": "Facts relevant to criterion 3 (characteristics vulnerable to threats): threat model T-01 to T-08, security risk entries", "doc_id": "D16", "locator": "section 4; D17 section 2"},
+        {"what": "Candidate 524B documents exist: postmarket cybersecurity management plan with CVD (D21), security risk management process (D17 / SRMP-ARR-01), SBOM (D15)", "doc_id": "D21", "locator": "whole document"}
+      ],
+      "not_found": [
+        {"what": "Any explicit cyber device / section 524B applicability determination with the three criteria answered", "searched": "all documents; searched for '524B', 'cyber device', 'internet', 'FD&C'"},
+        {"what": "A mapping of the statutory 524B(b)(1)-(3) elements (plan, processes and procedures, SBOM) to submitted documents", "searched": "all documents including D01 contents; searched for '524B', 'statutory', 'mapping'"}
+      ],
+      "parameter_concerns": [
+        {"what": "The facts support all three criteria (cloud connectivity, sponsor software, threat model), so the device would be a cyber device. The SBOM required under 524B(b)(3) is for build b1150 and lacks the Hub v2 file, so the statutory SBOM element is incomplete for the proposed build", "doc_id": "D15", "locator": "section 1"},
+        {"what": "The postmarket plan D21 (approved 2026-04-01) has no periodic security testing and does not reference the cyber device obligations", "doc_id": "D21", "locator": "sections 2 to 4"}
+      ],
+      "contradictions": []
+    },
+    {
+      "l1": "L1-28",
+      "expected_evidence": "Each DoC names the applicant, product/build, statement of conformity, standard and edition with options, FDA recognition number, date/place, signature/name/function and limitations. Editions carry current recognition, clauses are explicit with no deviations, and IEC 62304 covers 5.1, 6 and 8. Supporting evidence relates to the proposed build, supplemental documents exist for process standards, labs are named, there are no promissory statements, general-use standards are justified, and every standard cited in the module is listed, with expected standards addressed.",
+      "found": [
+        {"what": "Applicant with address ('Industriestrasse 12, 30457 Hannover, Germany'), product 'software version 3.2.0, build b1187'", "doc_id": "D22", "locator": "section 1"},
+        {"what": "DoC table: DoC-1 IEC 62304:2006+AMD1:2015 (Ed 1.1) 13-79, clauses '5.1 (all), 5.2–5.8, 6, 7, 8, 9'; DoC-2 ISO 14971:2019 (third edition) 5-125, clauses 4–10; DoC-3 ANSI/UL 2900-1, Second Edition (2023) 13-96, 'all'; DoC-4 IEC 62366-1:2015+AMD1:2020 (Ed 1.1) 5-129, 'all'; DoC-5 IEC 81001-5-1:2021 (Ed 1.0) 13-122, '4–9 (Annex A not claimed)'. Deviations 'none'; date of issue 2026-04-20 for all", "doc_id": "D22", "locator": "section 1 table"},
+        {"what": "Statement of conformity, place of issue Hannover, 'Signatory: R. Lindqvist, Regulatory Affairs Director', limitations 'declarations apply to software version 3.2.0 as verified in D10 and D19; conformity activities completed by 2026-04-12'", "doc_id": "D22", "locator": "section 1, final paragraph"},
+        {"what": "Supplemental documentation: 'IEC 62304: D08 and DHF plan records; IEC 62366-1: usability engineering file UEF-ARR-02 (module M5); IEC 81001-5-1: D16–D21.' General-information standards: 'ANSI/AAMI SW96:2023, AAMI TIR57:2016, AAMI TIR45:2023, IEC TR 80002-1:2009'", "doc_id": "D22", "locator": "section 2"},
+        {"what": "IEC 62304 Ed 1.1 lifecycle statement; DoC-1 covers 5.1, 6 and 8", "doc_id": "D08", "locator": "section 1"},
+        {"what": "Other standards/specifications cited in the module: ANSI/AAMI SW91 (D08 section 3, D13), MISRA C++:2023 (D08 section 4), ISO/IEC 29147 and 30111 (D21 section 3), CVSS v3.1 (D17), OWASP MASVS/ASVS (D19), CycloneDX 1.5 (D15), IEC/TR 80002-1 (D07), ANSI/AAMI SW96:2023 (D17)", "doc_id": "D08", "locator": "various"}
+      ],
+      "not_found": [
+        {"what": "An actual signature (only signatory name and function are given)", "searched": "D22; searched for 'sign'"},
+        {"what": "Named test laboratory / certification body, address and accreditation (ASCA or other) for any DoC. In particular, the UL 2900-1 'all clauses' claim has no named lab", "searched": "all documents; searched for 'ASCA', 'accredit', 'laborator', 'certif', 'UL '"},
+        {"what": "Supplemental documentation for ISO 14971 (D07 is not referenced from D22) and for ANSI/UL 2900-1 (no summary test report against UL 2900-1 test requirements)", "searched": "D22 section 2; D07; D19"},
+        {"what": "Basis of use, underlying data and deviation explanations for the general-use standards (SW96, TIR57, TIR45, TR 80002-1), and their editions' recognition status", "searched": "D22, D17, D08, D07"},
+        {"what": "A module standards list that includes all cited standards with use type (SW91, MISRA C++:2023, ISO/IEC 29147/30111 and CycloneDX are cited but not listed). No eSTAR-generated DoC or eSTAR standards entries", "searched": "all documents; searched for 'eSTAR', 'SW91', 'MISRA', '29147'"},
+        {"what": "Treatment of standards expected for an ambulatory ECG arrhythmia software module, e.g., ANSI/AAMI EC57 (arrhythmia algorithm testing; SRS-002 uses MIT-BIH reference set), IEC 60601-2-47, IEC 60601-1 clause 14 (PEMS), ANSI/AAMI SW91. Neither declared, nor general use, nor equivalent evidence referenced (they may sit in bench module M1, which is not stated)", "searched": "all documents; searched for 'EC57', '60601', 'SW91', 'MIT-BIH'"},
+        {"what": "Promissory or future-conformance statements in DoCs (L2-28.07): none found, which is the expected outcome", "searched": "D22; searched for 'will', 'planned', 'future'"}
+      ],
+      "parameter_concerns": [
+        {"what": "DoC-3 'ANSI/UL 2900-1, Second Edition (2023)' with recognition number '13-96'. To reviewer knowledge, 13-96 has been associated with UL 2900-2-1 rather than UL 2900-1, and recognition of a UL 2900-1 second edition should be confirmed in the FDA recognized-standards database. The edition/number pair is not plausibly verified", "doc_id": "D22", "locator": "section 1, DoC-3 row"},
+        {"what": "DoC-3 claims all clauses with no deviations, but the supporting evidence lacks UL 2900-1 test elements: malware testing, static binary analysis, SAST results, and a penetration test on the final build (the PT-01 pen test was on 3.1.0 by in-house developers)", "doc_id": "D22", "locator": "DoC-3 row vs D19 sections 1-2"},
+        {"what": "The limitation 'apply to software version 3.2.0 as verified in D10 and D19' covers evidence partly on other builds: D19 pen test on 3.1.0 b1098, D10 TC-031/TC-032/TC-037 on 3.1.4 b1142, D20 vulnerability assessment and D15 SBOM on b1150. DoC-5 (IEC 81001-5-1) relies on D16–D21, which include these non-release builds", "doc_id": "D22", "locator": "section 1, limitations; section 2"},
+        {"what": "'Conformity activities completed by 2026-04-12', but the release approval (2026-04-15), configuration records D03/D12 (2026-04-16) and IFU (2026-04-22) are later. DoC issue date 2026-04-20 precedes D22 approval 2026-04-28", "doc_id": "D22", "locator": "section 1"},
+        {"what": "DoC-1 claims clause 8 (configuration management, incl. SOUP identification) and 5.3/7.1 SOUP clauses with 'Deviations: none', while the SOUP list D14 omits SBOM components (BlueZ, libcurl, protobuf, glibc, busybox, mbedtls), the SBOM shows libdsp 4.1.0 vs 4.1.2 in configuration, and the anomaly list D13 is for build b1180", "doc_id": "D22", "locator": "DoC-1 row vs D14, D15, D13"},
+        {"what": "DoC-4 IEC 62366-1 is declared for this software module, but its evidence sits in module M5 (UEF-ARR-02), which is not supplied here", "doc_id": "D22", "locator": "section 2"},
+        {"what": "DoC-5 IEC 81001-5-1 excludes Annex A; ANSI/AAMI SW96:2023 is used as the security risk method (D17 section 1) but only as 'general information'", "doc_id": "D22", "locator": "DoC-5 row; section 2; D17 section 1"},
+        {"what": "The other editions/recognition numbers look plausible to reviewer knowledge (IEC 62304 Ed 1.1 = 13-79; ISO 14971:2019 = 5-125; IEC 62366-1 Ed 1.1 = 5-129). IEC 81001-5-1 recognition number 13-122 should be confirmed", "doc_id": "D22", "locator": "section 1 table"}
+      ],
+      "contradictions": [
+        {"what": "DoC-1 'Deviations: none' for SOUP identification/configuration management vs SOUP list and SBOM that disagree on membership and on the libdsp version", "doc_ids": ["D22","D14","D15","D03"]},
+        {"what": "The DoCs say the product is build b1187 as verified in D10 and D19; D19 pen test is on b1098, and D10 includes runs on b1142", "doc_ids": ["D22","D19","D10"]}
+      ]
+    }
+  ],
+  "unexpected_material": [
+    {"doc_id": "D23", "what": "IFU says it applies to software version 3.2.1, while the module proposes 3.2.0 and ANM-104 is 'deferred to 3.2.1' (D13)", "why_it_matters": "Labeling version identity does not match the proposed build. The SBOM-availability and support statements in labeling may refer to a different release"},
+    {"doc_id": "D10", "what": "Summary 'All 40 system test cases passed on build b1187' vs execution records '41 runs: 37 pass, 3 fail, 1 blocked'. Only 39 distinct test cases are listed (TC-026 absent), and TC-031 ran on 3.1.4 b1142 dated 2026-03-02, outside the declared window", "why_it_matters": "This undermines the D22 limitation 'as verified in D10' and the security system test claims"},
+    {"doc_id": "D13", "what": "Unresolved anomaly list scoped to build b1180, extracted 2026-04-05; header says 5 open, table lists 6; ANM-109 (TC-035 failure in D10) is missing; ANM-101 disposition text is garbled ('fixed in b1187 hotpatch? no: deferred')", "why_it_matters": "The findings and anomaly assessment for security (L2-23.06) and the IEC 62304 DoC depend on a complete anomaly list for the release build"},
+    {"doc_id": "D05", "what": "Architecture Rev 2.3 shows IF-02 as outbound 443 only; the inbound 8443 listener added in 3.2.0 (CH-31) is absent", "why_it_matters": "The attack surface used for threat modelling and testing may be understated in the system architecture"},
+    {"doc_id": "D14", "what": "zlib-ng anomaly review scope is version 2.1.3 (2025-10-02), while 2.1.6 is shipped; no Hub v2 kernel 5.15.148 SOUP entry", "why_it_matters": "SOUP vulnerability cross-checks do not match shipped versions or platforms"}
+  ]
+}
